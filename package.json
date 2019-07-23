@@ -1,0 +1,32 @@
+{
+  "name": "itzmeanjan.in",
+  "version": "1.0.0",
+  "description": "A simple Express App, to be used for deploying my personal website on Amazon LightSail",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/itzmeanjan/itzmeanjan.in.git"
+  },
+  "keywords": [
+    "express",
+    "node",
+    "cloud",
+    "amazon",
+    "blog",
+    "personal",
+    "website",
+    "lightsail"
+  ],
+  "author": "Anjan Roy <anjanroy@yandex.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/itzmeanjan/itzmeanjan.in/issues"
+  },
+  "homepage": "https://github.com/itzmeanjan/itzmeanjan.in#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
