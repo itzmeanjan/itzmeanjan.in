@@ -25,5 +25,5 @@ app.get('/myResume.pdf', (req, res) => {
                            (err) => { res.end(); });
 });
 
-http.createServer(app).listen(80, '13.127.52.44',
+http.createServer(app).listen(8000, '0.0.0.0',
                               () => {console.log('[+]Server started')});

@@ -1,0 +1,11 @@
+[Unit]
+Description=Keeps `itzmeanjan.in` back-end alive
+
+[Service]
+User=itzmeanjan
+WorkingDirectory=current_working_directory
+ExecStart=/usr/bin/node path_to_index.js
+Restart=always
+
+[Install]
+WantedBy=multi-user.target
