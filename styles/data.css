@@ -47,22 +47,28 @@ body{
   outline: none;
 }
 
-h1{
+h1 {
   color: #BCF5A9;
   font-family: Arial, Helvetica, sans-serif;
   font-style: italic;
 }
 
+h3 {
+  color: #afcfaf;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
 p{
   font-size: 1.4vmax;
   color: powderblue;
-  margin: 1vmax;
+  margin: 2vmax;
   font-family: 'Courier New', Courier, monospace;
+  font-style: italic;
 }
 
 .simpleLink:link{
   color: white;
-  font-size: 1.4vmax;
+  font-size: 1.3vmax;
 }
 .simpleLink:visited{
   color: darksalmon;

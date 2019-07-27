@@ -1,5 +1,5 @@
 [Unit]
-Description=Keeps `itzmeanjan.in` back-end alive
+Description=Backend keeper service
 
 [Service]
 User=itzmeanjan
