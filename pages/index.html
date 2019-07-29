@@ -32,8 +32,8 @@
           about
         </h1>
         <p>
-          I, <span style="color: white"><b style="font-size: 1.5vh;" onmouseenter="event.target.style.fontSize='2vh';" onmouseleave="
-          event.target.style.fontSize='1.5vh';">Anjan Roy</b></span>, a programmer from <big>I</big>ndia, who loves both technology and nature :)
+          I, <span style="color: white"><b style="font-size: 1.5vh;" onmouseenter="event.target.style.fontSize='2vh'; let newDiv = document.createElement('div'); newDiv.id='myImage'; newDiv.style.padding='.8vmin'; let myImage = document.createElement('img'); myImage.src = 'myImage.jpg'; myImage.height = 140; myImage.width = 100; myImage.style.borderRadius='3vmax'; newDiv.appendChild(myImage); event.target.parentNode.parentNode.appendChild(newDiv);" onmouseleave="
+          event.target.style.fontSize='1.5vh'; event.target.parentNode.parentNode.removeChild(document.getElementById('myImage'));">Anjan Roy</b></span>, a programmer from <big>I</big>ndia, who loves both technology and nature :)
           <br>
           <br>
           You may be interested in taking a look at my <a class="simpleLink" href="myResume.pdf" target="_blank">CV</a>.
@@ -47,7 +47,7 @@
         </h1>
         <p>
           I completed my graduation from Dept. of Computer & System Sciences, Visva-Bharati,
-          Santiniketan, India, Pin - 731235 with a B.Sc in Computer Science as Department Topper in 2018.
+          Santiniketan, India with a B.Sc in Computer Science as Department Topper in 2018.
           <br>
           <br>
           Currently I'm pursing my post-gradution in Computer Science in same University.
