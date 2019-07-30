@@ -1,0 +1,212 @@
+{
+    "itzmeanjan.in": {
+        "url": "https://github.com/itzmeanjan/itzmeanjan.in",
+        "description": "A simple to follow guide, for deploying your website on Amazon LightSail",
+        "lang": "HTML",
+        "langColor": "#e34c26",
+        "updated": 1564492705.0
+    },
+    "airQ": {
+        "url": "https://github.com/itzmeanjan/airQ",
+        "description": "A near real time Air Quality Indicator, written in Julia with ❤️",
+        "lang": "Julia",
+        "langColor": "#a270ba",
+        "updated": 1564490564.0
+    },
+    "airQ-insight": {
+        "url": "https://github.com/itzmeanjan/airQ-insight",
+        "description": "Works on Air Quality Indication Dataset collected by airQ to give deeper insight, written with ❤️ using Python",
+        "lang": "Python",
+        "langColor": "#3572A5",
+        "updated": 1564416283.0
+    },
+    "itzmeanjan.github.io": {
+        "url": "https://github.com/itzmeanjan/itzmeanjan.github.io",
+        "description": "A website",
+        "lang": "HTML",
+        "langColor": "#e34c26",
+        "updated": 1563910438.0
+    },
+    "indian-railway": {
+        "url": "https://github.com/itzmeanjan/indian-railway",
+        "description": "A collection of utility Scripts, for manipulating Indian Railway's Running Train(s) Dataset i.e. Time Table, written with ❤️",
+        "lang": "JavaScript",
+        "langColor": "#f1e05a",
+        "updated": 1563819249.0
+    },
+    "vb_notice_reader": {
+        "url": "https://github.com/itzmeanjan/vb_notice_reader",
+        "description": "A simple App for fetching and displaying parsed notices from Visva-Bharati, Santiniketan's Official Website, made with ❤️ using Flutter",
+        "lang": "Dart",
+        "langColor": "#00B4AB",
+        "updated": 1563198079.0
+    },
+    "osm": {
+        "url": "https://github.com/itzmeanjan/osm",
+        "description": "A flutter package, helps you to integrate Open Street Map within your flutter app. Built with <3",
+        "lang": "Dart",
+        "langColor": "#00B4AB",
+        "updated": 1563197998.0
+    },
+    "weatherz-desktop": {
+        "url": "https://github.com/itzmeanjan/weatherz-desktop",
+        "description": "A simple JavaScript Desktop Application for fetching and displaying Weather Data of almost 6.36M places along with Maps 😉",
+        "lang": "JavaScript",
+        "langColor": "#f1e05a",
+        "updated": 1563127928.0
+    },
+    "countryAndWeather": {
+        "url": "https://github.com/itzmeanjan/countryAndWeather",
+        "description": "A collection of scripts for grabbing and processing detailed Country/ Place Record & Weather Data of 6.36M places, written in Python with ❤️",
+        "lang": "Python",
+        "langColor": "#3572A5",
+        "updated": 1562823161.0
+    },
+    "locatorz": {
+        "url": "https://github.com/itzmeanjan/locatorz",
+        "description": "An Android App, which lets you work on Location Data, built with ❤️ using Flutter",
+        "lang": "Dart",
+        "langColor": "#00B4AB",
+        "updated": 1561313295.0
+    },
+    "intent": {
+        "url": "https://github.com/itzmeanjan/intent",
+        "description": "A simple Flutter plugin to deal with Android Intents, written with ❤️",
+        "lang": "Dart",
+        "langColor": "#00B4AB",
+        "updated": 1561308650.0
+    },
+    "vb_noticeboard": {
+        "url": "https://github.com/itzmeanjan/vb_noticeboard",
+        "description": "A simple Dart wrapper for fetching, parsing and extracting notices from Visva-Bharati, Santiniketan's Official website",
+        "lang": "Dart",
+        "langColor": "#00B4AB",
+        "updated": 1559807848.0
+    },
+    "fCreate": {
+        "url": "https://github.com/itzmeanjan/fCreate",
+        "description": "A Simple EYE Test Game, built using Flutter CustomPainter, with ❤️",
+        "lang": "Dart",
+        "langColor": "#00B4AB",
+        "updated": 1559807561.0
+    },
+    "locate": {
+        "url": "https://github.com/itzmeanjan/locate",
+        "description": "A Flutter plugin to work with Android Location Services.",
+        "lang": "Kotlin",
+        "langColor": "#F18E33",
+        "updated": 1559402052.0
+    },
+    "translate": {
+        "url": "https://github.com/itzmeanjan/translate",
+        "description": "A simple to use Dart package, for detecting & translating text/ html pages using Yandex.Translate API",
+        "lang": "Dart",
+        "langColor": "#00B4AB",
+        "updated": 1559401026.0
+    },
+    "countryIO": {
+        "url": "https://github.com/itzmeanjan/countryIO",
+        "description": "A simple country.io data parser, written with ❤️ using Dart :)",
+        "lang": "Dart",
+        "langColor": "#00B4AB",
+        "updated": 1559141667.0
+    },
+    "transferZ": {
+        "url": "https://github.com/itzmeanjan/transferZ",
+        "description": "A simple Android Application built with ❤️ using Flutter, for transferring files between devices.",
+        "lang": "Dart",
+        "langColor": "#00B4AB",
+        "updated": 1558809339.0
+    },
+    "weatherz": {
+        "url": "https://github.com/itzmeanjan/weatherz",
+        "description": "Another Weather App, built with Flutter ;)",
+        "lang": "Dart",
+        "langColor": "#00B4AB",
+        "updated": 1557992172.0
+    },
+    "osm_tile_fetcher": {
+        "url": "https://github.com/itzmeanjan/osm_tile_fetcher",
+        "description": "A Dart Implementation of Open Street Map Tile Fetcher.",
+        "lang": "Dart",
+        "langColor": "#00B4AB",
+        "updated": 1557742915.0
+    },
+    "trackm3": {
+        "url": "https://github.com/itzmeanjan/trackm3",
+        "description": "A Live Location Tracker built with Electron, Express & Flutter",
+        "lang": "JavaScript",
+        "langColor": "#f1e05a",
+        "updated": 1557314031.0
+    },
+    "sensorz": {
+        "url": "https://github.com/itzmeanjan/sensorz",
+        "description": "A Simple Flutter Android App, which displays Sensor Data.",
+        "lang": "Dart",
+        "langColor": "#00B4AB",
+        "updated": 1557256385.0
+    },
+    "astroZ": {
+        "url": "https://github.com/itzmeanjan/astroZ",
+        "description": "An Android App, shows Astronomy Picture of the Day, built with ❤️ using Flutter :)",
+        "lang": "Dart",
+        "langColor": "#00B4AB",
+        "updated": 1556977028.0
+    },
+    "transferZ-desktop": {
+        "url": "https://github.com/itzmeanjan/transferZ-desktop",
+        "description": "A Desktop client for transferZ, file transfer app, built with Electron and Node",
+        "lang": "JavaScript",
+        "langColor": "#f1e05a",
+        "updated": 1556475263.0
+    },
+    "mapZ": {
+        "url": "https://github.com/itzmeanjan/mapZ",
+        "description": "A Geospatial Application",
+        "lang": "Python",
+        "langColor": "#3572A5",
+        "updated": 1555417489.0
+    },
+    "apod_fetcher": {
+        "url": "https://github.com/itzmeanjan/apod_fetcher",
+        "description": "A Pythonic wayout to fetch Astronomy Picture of the Day from NASA and populate Database.",
+        "lang": "Python",
+        "langColor": "#3572A5",
+        "updated": 1554833836.0
+    },
+    "apod_server": {
+        "url": "https://github.com/itzmeanjan/apod_server",
+        "description": "A simple Express App to be used as API endpoint to facilitate query of Astronomy Picture of the Day",
+        "lang": "JavaScript",
+        "langColor": "#f1e05a",
+        "updated": 1554833781.0
+    },
+    "pymet": {
+        "url": "https://github.com/itzmeanjan/pymet",
+        "description": "A simple to use Python Interface for fetching MET Norway Weather Data.",
+        "lang": "Python",
+        "langColor": "#3572A5",
+        "updated": 1545845751.0
+    },
+    "pynotif": {
+        "url": "https://github.com/itzmeanjan/pynotif",
+        "description": "A very simple to use Python API for accessing native notification service on Linux",
+        "lang": "C",
+        "langColor": "#555555",
+        "updated": 1545759115.0
+    },
+    "imd_weather": {
+        "url": "https://github.com/itzmeanjan/imd_weather",
+        "description": "A simple python API, helps you to fetch City Weather data from Indian Meteorological Dept.",
+        "lang": "Python",
+        "langColor": "#3572A5",
+        "updated": 1545591535.0
+    },
+    "pyway2sms": {
+        "url": "https://github.com/itzmeanjan/pyway2sms",
+        "description": "Pythonic API for accessing Way2SMS, a programmable SMS sending service in India, features",
+        "lang": "Python",
+        "langColor": "#3572A5",
+        "updated": 1545383804.0
+    }
+}
