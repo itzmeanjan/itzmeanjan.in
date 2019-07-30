@@ -23,30 +23,6 @@ body{
   margin-bottom: 1vmax;
 }
 
-#navBar{
-  background-color: #437070;
-  width: 90%;
-  margin-left: 1vmax;
-  margin-right: 1vmax;
-  border-radius: 2vmax;
-  padding-left: 2vmax;
-  padding-top: 1vmax;
-  padding-bottom: 1vmax;
-  padding-right: 2vmax;
-}
-
-.navLink:link{
-  font-size: 2.7vmax;
-  color: #9fc69f;
-  outline: none;
-}
-
-.navLink:hover{
-  font-size: 2.9vmax;
-  color: greenyellow;
-  outline: none;
-}
-
 h1 {
   color: #BCF5A9;
   font-family: Arial, Helvetica, sans-serif;

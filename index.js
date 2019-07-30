@@ -79,6 +79,12 @@ app.get('/projects.css', (req, res) => {
                            (err) => { res.end(); });
 });
 
+app.get('/common.css', (req, res) => {
+  console.log(`GET /common.css ${req.ip} ${Date().toString()}`);
+  res.status(200).sendFile('./styles/common.css', {root : __dirname},
+                           (err) => { res.end(); });
+});
+
 app.get('/myImage.jpg', (req, res) => {
   console.log(`GET /myImage.jpg ${req.ip} ${Date().toString()}`);
   res.status(200).sendFile('./images/myImage.jpg', {root : __dirname},
