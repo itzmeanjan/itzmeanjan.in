@@ -16,40 +16,37 @@ body{
 }
 
 .childDiv{
+  background-color: #263e40;
+  border-radius: 2vmax;
   width: 90%;
-  margin-left: 2vmax;
-  margin-right: 2vmax;
-  margin-top: 1vmax;
-  margin-bottom: 1vmax;
+  margin: 2vmax;
+  padding-top: .1vmin;
+  padding-bottom: .1vmin;
 }
 
 h1 {
+  margin-left: 1vw;
   color: #BCF5A9;
   font-family: Arial, Helvetica, sans-serif;
-  font-style: italic;
 }
 
 p{
   font-size: 1.4vmax;
   color: powderblue;
-  margin: 2vmax;
+  margin-left: 2vmax;
+  margin-top: 1vmax;
   font-family: 'Courier New', Courier, monospace;
   font-style: italic;
 }
 
 .simpleLink:link{
-  color: white;
+  color: #BCF5A9;
   font-size: 1.3vmax;
-}
-.simpleLink:visited{
-  color: darksalmon;
+  outline: none;
 }
 
 .simpleLink:hover{
   color: yellow;
   font-size: 2vmax;
-}
-
-.simpleLink:active{
-  color: crimson;
+  outline: none;
 }

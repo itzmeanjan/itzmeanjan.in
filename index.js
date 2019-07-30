@@ -97,5 +97,17 @@ app.get('/myResume.pdf', (req, res) => {
                            (err) => { res.end(); });
 });
 
+app.get('/projects.json', (req, res) => {
+  console.log(`GET /projects.json ${req.ip} ${Date().toString()}`);
+  res.status(200).sendFile('./data/projects.json', {root : __dirname},
+                           (err) => { res.end(); });
+});
+
+app.get('/projects.js', (req, res) => {
+  console.log(`GET /projects.js ${req.ip} ${Date().toString()}`);
+  res.status(200).sendFile('./scripts/projects.js', {root : __dirname},
+                           (err) => { res.end(); });
+});
+
 http.createServer(app).listen(8000, '0.0.0.0',
                               () => {console.log('[+]Server started')});

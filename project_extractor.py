@@ -11,6 +11,15 @@ except ImportError as e:
     print('[!]Module Unavailable : {}'.format(str(e)))
     exit(1)
 
+'''
+	extracts required data in form of a collection of tuples, where 
+	first element of tuple will be key of final JSON object and second one
+	a JSON object ( here a Python Dict[String, Any] )
+
+	function will return a map object which is to be iterated over,
+	and to be converted to Dict[String, Any] using dict(), which will be
+	finally written into a target_file, after serializing into JSON
+'''
 
 def extractIt(dataObject, targetClass: str = 'col-10 col-lg-9 d-inline-block', url: str = 'https://github.com/itzmeanjan'):
     try:
@@ -18,6 +27,9 @@ def extractIt(dataObject, targetClass: str = 'col-10 col-lg-9 d-inline-block', u
     except Exception:
         return None
 
+'''
+	fetches content of target webpage, which will be parsed using some `html` parser
+'''
 
 def fetchIt(url: str = 'https://github.com/itzmeanjan?tab=repositories') -> str:
     try:
@@ -26,6 +38,10 @@ def fetchIt(url: str = 'https://github.com/itzmeanjan?tab=repositories') -> str:
     except Exception:
         return None
 
+'''
+	main entry point of script, calls required methods in
+	proper order to finally write extracted data into target_file as JSON string
+'''
 
 def app(target_file: str = abspath(join(dirname(__file__), 'data/projects.json'))) -> bool:
     try:
@@ -33,7 +49,7 @@ def app(target_file: str = abspath(join(dirname(__file__), 'data/projects.json')
             dump(dict(extractIt(BeautifulSoup(fetchIt(), features='html.parser'))),
                  fd, ensure_ascii=False, indent=4)
         return True
-    except Exception as e:
+    except Exception:
         return False
 
 
