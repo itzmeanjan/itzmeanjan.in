@@ -109,5 +109,17 @@ app.get('/projects.js', (req, res) => {
                            (err) => { res.end(); });
 });
 
+app.get('/blog.json', (req, res) => {
+  console.log(`GET /blog.json ${req.ip} ${Date().toString()}`);
+  res.status(200).sendFile('./data/blog.json', {root : __dirname},
+                           (err) => { res.end(); });
+});
+
+app.get('/blog.js', (req, res) => {
+  console.log(`GET /blog.js ${req.ip} ${Date().toString()}`);
+  res.status(200).sendFile('./scripts/blog.js', {root : __dirname},
+                           (err) => { res.end(); });
+});
+
 http.createServer(app).listen(8000, '0.0.0.0',
                               () => {console.log('[+]Server started')});
