@@ -1,0 +1,11 @@
+[Unit]
+Description=Github repository details extractor
+Wants=githubParser.timer
+
+[Service]
+User=itzmeanjan
+WorkingDirectory=current-working-directory
+ExecStart=/usr/bin/python3 /absolute-path/project_extractor.py
+
+[Install]
+WantedBy=multi-user.target

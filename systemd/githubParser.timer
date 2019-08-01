@@ -1,0 +1,11 @@
+[Unit]
+Description=Github repository details extractor
+Requires=githubParser.service
+
+[Timer]
+Unit=githubParser.service
+OnUnitActiveSec=24h
+
+
+[Install]
+WantedBy=timers.target

@@ -3,7 +3,7 @@ Description=Backend keeper service
 
 [Service]
 User=itzmeanjan
-WorkingDirectory=current_working_directory
+WorkingDirectory=current-working-directory
 ExecStart=/usr/bin/node path_to_index.js
 Restart=always
 
