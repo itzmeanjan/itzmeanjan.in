@@ -1,5 +1,5 @@
 [Unit]
-Description=Github repository details extractor
+Description=Periodic Github repository details extractor
 Requires=githubParser.service
 
 [Timer]
