@@ -14,5 +14,16 @@
     ],
     "author": "Anjan Roy",
     "email": "anjanroy@yandex.com",
-    "content": "This is still under active development :)\nSo be patient\nThis is still under active development :)\nSo be patient\nThis is still under active development :)\nSo be patient"
+    "content": [
+        "Well this is a sample <big>c</big>ode",
+        "<div class='codeBlock'>",
+        "$ python3 app.py",
+        "</div>",
+        "now this works",
+        "<div class='codeBlock'>",
+        "map(lambda e: e * e, range(0, 10))",
+        "<br>",
+        "print(_)",
+        "</div>"
+    ]
 }
