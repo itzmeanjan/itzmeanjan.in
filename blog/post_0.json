@@ -1,5 +1,5 @@
 {
-    "title": "Deploying your website on Cloud using Systemd",
+    "title": "Deploying backend on Cloud using Systemd",
     "created": 1564681448,
     "updated": 1564681448,
     "tags": [
@@ -15,15 +15,31 @@
     "author": "Anjan Roy",
     "email": "anjanroy@yandex.com",
     "content": [
-        "Well this is a sample <big>c</big>ode",
-        "<div class='codeBlock'>",
-        "$ python3 app.py",
-        "</div>",
-        "now this works",
-        "<div class='codeBlock'>",
-        "map(lambda e: e * e, range(0, 10))",
+        "Well this is my very first blog post, so I'm pretty excited <big>&#x1f600</big>",
+        "<br><br>",
+        "In this article we're going to talk about, <strong>How to deploy backend on Cloud using systemd ?</strong> ",
+        "As backend we're going to consider this website, which is my personal website & also fully open source. ",
+        "<br><br>",
+        "Source Code : <a href='https://github.com/itzmeanjan/itzmeanjan.in' class='simpleLink' target='_blank'>here</a>",
+        "<br><br>",
+        "Though this website's backend is made of <big>N</big>odeJS & <big>E</big>xpressJS, ",
+        "you may consider building your own instance using <big>G</big>o/ <big>P</big>ython/ <big>R</big>uby on Rails/ <big>D</big>art or something else.",
+        "And as cloud provider I'm choosing <big>A</big>WS <big>L</big>ightSail, which has got pretty straight forward set up guideline(s). ",
+        "Feel free to use your favourite one. ",
+        "<br><br>",
+        "You may have already understood, why am I interested in using <big>S</big>ystemd service ? ",
+        "Which is nothing, but for keeping service up & running even after I logout of system. ",
+        "This use case may be more appropriate where we can log into Virtual Private Server instance, running on Cloud, using <big>S</big>SH client, ",
+        " install program(s)/ application(s) as per our need. In most of the cases we'll be allocated with two IP addresses, ",
+        "<br><br>",
+        "i > Private IP Address",
         "<br>",
-        "print(_)",
-        "</div>"
+        "ii > Public IP Address",
+        "<br><br>",
+        "So your backend will be visible to <big>I</big>nternet via its <big>P</big>ublic IP Address. If",
+        " you're interested in attaching a domain name with your Public IP Address, you can manage so using <big>D</big>NS Zone(s). ",
+        "<br><br>",
+        "Time to deploy backend ...",
+        ""
     ]
 }

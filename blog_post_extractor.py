@@ -10,7 +10,7 @@ def app(source_dir: str = abspath(join(dirname(__file__), 'blog')), sink_file: s
     def __extract_from_file__(filepath: str):
         with open(filepath, 'r') as fd:
             content = load(fd)
-            return {'title': content.get('title', ''), 'updated': content.get('updated', 0), 'author': content.get('author', ''), 'content': content.get('content', '')[:ceil(len(content.get('title', '')) * 3/2)]}
+            return {'title': content.get('title', ''), 'updated': content.get('updated', 0), 'author': content.get('author', ''), 'content': content.get('content', '')[0]}
 
     return_val = False
     try:

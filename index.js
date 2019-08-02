@@ -3,7 +3,6 @@
 const express = require('express');
 const http = require('http');
 const app = express();
-const fs = require('fs');
 
 app.get('/', (req, res) => {
   console.log(`GET / ${req.ip} ${Date().toString()}`);
@@ -51,6 +50,7 @@ app.get('/projects', (req, res) => {
 });
 
 app.get('/blog/post_:id.json', (req, res) => {
+  console.log(`GET /blog/post_${req.params.id}.json ${req.ip} ${Date().toString()}`);
   res.status(200).sendFile(`./blog/post_${req.params.id}.json`, { root: __dirname },
     (err) => { res.end(); });
 });

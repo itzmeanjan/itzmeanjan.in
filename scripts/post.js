@@ -25,6 +25,7 @@ window.addEventListener('DOMContentLoaded', () => {
         parentDiv.appendChild(childDiv);
     }
 
+
     let parentDiv = document.getElementById('parentDiv');
     fetch(`${window.location.href.toString()}.json`).then((data) => {
         data.json().then((dataInner) => {
@@ -39,6 +40,7 @@ window.addEventListener('DOMContentLoaded', () => {
             author.innerHTML = `${dataInner.author} | ${(new Date(dataInner.created * 1000)).toDateString()}`;
             let content = document.createElement('p');
             content.style.marginTop = '4vmax';
+            content.style.fontSize = '1.2vmax';
             content.innerHTML = dataInner.content.join(" ");
             article.appendChild(h1);
             article.appendChild(author);
