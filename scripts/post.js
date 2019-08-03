@@ -37,11 +37,11 @@ window.addEventListener('DOMContentLoaded', () => {
             let author = document.createElement('p');
             author.style.color = 'tomato';
             author.style.marginLeft = '2vmax';
-            author.innerHTML = `${dataInner.author} | ${(new Date(dataInner.created * 1000)).toDateString()}`;
+            author.innerHTML = `${dataInner.author} | ${(new Date(dataInner.updated * 1000)).toDateString()}`;
             let content = document.createElement('p');
             content.style.marginTop = '4vmax';
             content.style.fontSize = '1.2vmax';
-            content.innerHTML = dataInner.content.join(" ");
+            content.innerHTML = dataInner.content.join("  ");
             article.appendChild(h1);
             article.appendChild(author);
             article.appendChild(content);
