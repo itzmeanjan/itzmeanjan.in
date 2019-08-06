@@ -16,3 +16,10 @@ Author: Anjan Roy<anjanroy@yandex.com>
     padding-top: 1.5vmax;
     padding-bottom: 1.5vmax;
 }
+
+.highlight {
+    background-color: #112233;
+    border-radius: 1.5vmax;
+    padding-left: 0.15vmin;
+    padding-right: 0.15vmin;
+}
