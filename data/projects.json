@@ -1,24 +1,24 @@
 {
-    "airQ-insight": {
-        "url": "https://github.com/itzmeanjan/airQ-insight",
-        "description": "Works on Air Quality Indication Dataset collected by airQ to give deeper insight, written with ❤️ using Python",
-        "lang": "Python",
-        "langColor": "#3572A5",
-        "updated": 1564687458.0
+    "airQ": {
+        "url": "https://github.com/itzmeanjan/airQ",
+        "description": "A near real time Air Quality Indicator, written in Julia with ❤️",
+        "lang": "Julia",
+        "langColor": "#a270ba",
+        "updated": 1564922763.0
     },
     "itzmeanjan.in": {
         "url": "https://github.com/itzmeanjan/itzmeanjan.in",
         "description": "A simple to follow guide, for deploying your website on Amazon LightSail",
         "lang": "HTML",
         "langColor": "#e34c26",
-        "updated": 1564687375.0
+        "updated": 1564839093.0
     },
-    "airQ": {
-        "url": "https://github.com/itzmeanjan/airQ",
-        "description": "A near real time Air Quality Indicator, written in Julia with ❤️",
-        "lang": "Julia",
-        "langColor": "#a270ba",
-        "updated": 1564680797.0
+    "airQ-insight": {
+        "url": "https://github.com/itzmeanjan/airQ-insight",
+        "description": "Works on Air Quality Indication Dataset collected by airQ to give deeper insight, written with ❤️ using Python",
+        "lang": "Python",
+        "langColor": "#3572A5",
+        "updated": 1564753484.0
     },
     "itzmeanjan.github.io": {
         "url": "https://github.com/itzmeanjan/itzmeanjan.github.io",
