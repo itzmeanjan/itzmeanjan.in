@@ -4,6 +4,9 @@ const express = require('express');
 const http = require('http');
 const app = express();
 
+// good to set it, when deploying in production
+app.set('env', 'production');
+
 app.get('/', (req, res) => {
   console.log(`GET / ${req.ip} ${Date().toString()}`);
   res.status(200).contentType('html').sendFile(
@@ -47,6 +50,19 @@ app.get('/projects', (req, res) => {
       if (err !== undefined && err !== null)
         res.send('Something went wrong').end();
     });
+});
+
+// a GET request at this path, will simply return IP address of client
+// simply made so that people can check their own public IP address if in need
+// well I know, there're thousands of services, providing same/ much more functionalities
+// but still it's a small venture
+app.get('/ip', (req, res) => {
+  console.log(`${req.method} ${req.path} ${req.ip} ${Date().toString()}`);
+  res.status(200).contentType('json').json(
+    {
+      ip: req.ip
+    }
+  ).end();
 });
 
 app.get('/blog/post_:id.json', (req, res) => {
@@ -119,4 +135,4 @@ app.get('/blog/post.js', (req, res) => {
 });
 
 http.createServer(app).listen(8000, '0.0.0.0',
-  () => { console.log('[+]Server started') });
+  () => { console.log('[+]Server started\n') });
