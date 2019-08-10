@@ -1,24 +1,31 @@
 {
-    "airQ-insight": {
-        "url": "https://github.com/itzmeanjan/airQ-insight",
-        "description": "Works on Air Quality Indication Dataset collected by airQ to give deeper insight, written with ❤️ using Python",
-        "lang": "Python",
-        "langColor": "#3572A5",
-        "updated": 1565159782.0
-    },
-    "airQ": {
-        "url": "https://github.com/itzmeanjan/airQ",
-        "description": "A near real time Air Quality Indicator, written in Julia with ❤️",
-        "lang": "Julia",
-        "langColor": "#a270ba",
-        "updated": 1565155856.0
+    "streamZ": {
+        "url": "https://github.com/itzmeanjan/streamZ",
+        "description": "A simple video streaming application made with Dart, JavaScript, HTML & CSS, with ❤️",
+        "lang": "Dart",
+        "langColor": "#00B4AB",
+        "updated": 1565377791.0
     },
     "itzmeanjan.in": {
         "url": "https://github.com/itzmeanjan/itzmeanjan.in",
         "description": "A simple to follow guide, for deploying your website on Amazon LightSail",
         "lang": "HTML",
         "langColor": "#e34c26",
-        "updated": 1565107005.0
+        "updated": 1565293939.0
+    },
+    "airQ-insight": {
+        "url": "https://github.com/itzmeanjan/airQ-insight",
+        "description": "Works on Air Quality Indication Dataset collected by airQ to give deeper insight, written with ❤️ using Python",
+        "lang": "Python",
+        "langColor": "#3572A5",
+        "updated": 1565283004.0
+    },
+    "airQ": {
+        "url": "https://github.com/itzmeanjan/airQ",
+        "description": "A near real time Air Quality Indicator, written in Julia with ❤️",
+        "lang": "Julia",
+        "langColor": "#a270ba",
+        "updated": 1565281550.0
     },
     "itzmeanjan.github.io": {
         "url": "https://github.com/itzmeanjan/itzmeanjan.github.io",
@@ -201,12 +208,5 @@
         "lang": "Python",
         "langColor": "#3572A5",
         "updated": 1545591535.0
-    },
-    "pyway2sms": {
-        "url": "https://github.com/itzmeanjan/pyway2sms",
-        "description": "Pythonic API for accessing Way2SMS, a programmable SMS sending service in India, features",
-        "lang": "Python",
-        "langColor": "#3572A5",
-        "updated": 1545383804.0
     }
 }
