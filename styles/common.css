@@ -20,9 +20,12 @@ body{
   background-color: #263e40;
   border-radius: 2vmin;
   width: 90%;
-  margin: 2vmax;
   padding-top: .1vmax;
   padding-bottom: .1vmax;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 1.4vmax;
+  margin-bottom: 1.4vmax;
 }
 
 h1 {
@@ -54,13 +57,16 @@ p{
 #navBar{
   background-color: #437070;
   width: 90%;
-  margin-left: 1vmax;
-  margin-right: 1vmax;
+  margin-left: auto;
+  margin-right: auto;
   border-radius: 2vmax;
   padding-left: 2vmax;
   padding-top: 1vmax;
   padding-bottom: 1vmax;
   padding-right: 2vmax;
+  position: sticky;
+  top: .4vmax;
+  text-align: center;
 }
 
 .navLink:link{
@@ -76,9 +82,10 @@ p{
 }
 
 #footerDiv {
-  margin-left: 40vw;
   margin-top: 2vmin;
   margin-bottom: 1vmin;
+  display: block;
+  text-align: center;
 }
 
 #footerText {

@@ -58,7 +58,7 @@ app.get('/projects', (req, res) => {
 // but still it's a small venture
 app.get('/ip', (req, res) => {
   console.log(`${req.method} ${req.path} ${req.ip} ${Date().toString()}`);
-  res.status(200).contentType('json').json(
+  res.status(200).contentType('application/json').send(
     {
       ip: req.ip
     }
