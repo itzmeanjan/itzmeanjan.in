@@ -3,7 +3,6 @@
 from os.path import abspath, dirname, join, isfile, isdir, getmtime
 from os import listdir
 from json import load, dump
-from math import ceil
 
 
 def app(source_dir: str = abspath(join(dirname(__file__), 'blog')), sink_file: str = abspath(join(dirname(__file__), 'data/blog.json'))) -> bool:
@@ -25,7 +24,7 @@ def app(source_dir: str = abspath(join(dirname(__file__), 'blog')), sink_file: s
             content = load(fd)
         content.update({'updated': int(getmtime(filepath))})
         __write_back_to_file__(filepath, content)
-        return {'title': content.get('title', ''), 'updated': content.get('updated', 0), 'author': content.get('author', ''), 'content': content.get('content', '')[0]}
+        return {'title': content.get('title', ''), 'created': content.get('created', 0), 'author': content.get('author', ''), 'content': content.get('content', '')[0]}
 
     return_val = False
     try:

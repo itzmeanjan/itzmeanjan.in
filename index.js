@@ -138,5 +138,5 @@ app.get('/blog/post.js', (req, res) => {
     (err) => { res.end(); });
 });
 
-http.createServer(app).listen(8001, '0.0.0.0',
+http.createServer(app).listen(8000, '0.0.0.0',
   () => { console.log('[+]Server started\n') });
