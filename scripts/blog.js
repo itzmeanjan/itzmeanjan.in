@@ -30,7 +30,7 @@ window.addEventListener('DOMContentLoaded', () => {
                 para.innerHTML = `${dataInnner[elem].content} ...`;
                 let author = document.createElement('p');
                 author.style.color = 'tomato';
-                author.innerHTML = `${dataInnner[elem].author} | ${(new Date(dataInnner[elem].updated * 1000).toDateString())}`;
+                author.innerHTML = `${dataInnner[elem].author} | ${(new Date(dataInnner[elem].created * 1000).toDateString())}`;
                 article.appendChild(h1);
                 article.appendChild(para);
                 article.appendChild(author);

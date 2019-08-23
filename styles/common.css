@@ -1,5 +1,5 @@
 /*
-Author: Anjan Roy<anjanroy@yandex.com>
+  Author: Anjan Roy <anjanroy@yandex.com>
 */
 
 html, body {
@@ -89,10 +89,11 @@ p{
 }
 
 #footerText {
-	font-size: 1vmax;
+  font-size: 1vmax;
+  color: white;
 }
 
 #footerLink {
-	color: #9fc69f; 
+	color: white;
 	outline: none;
 }

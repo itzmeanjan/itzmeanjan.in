@@ -4,21 +4,48 @@
         "description": "Works on Air Quality Indication Dataset collected by airQ to give deeper insight, written with ❤️ using Python",
         "lang": "Python",
         "langColor": "#3572A5",
+<<<<<<< HEAD
         "updated": 1566491492.0
-    },
-    "airQ": {
-        "url": "https://github.com/itzmeanjan/airQ",
-        "description": "A near real time Air Quality Indicator, written in Julia with ❤️",
-        "lang": "Julia",
-        "langColor": "#a270ba",
-        "updated": 1566483583.0
+=======
+<<<<<<< HEAD
+        "updated": 1565587645.0
     },
     "streamZ": {
         "url": "https://github.com/itzmeanjan/streamZ",
         "description": "A simple video streaming application made with Dart, JavaScript, HTML, CSS & ❤️",
         "lang": "Dart",
         "langColor": "#00B4AB",
+        "updated": 1565546843.0
+=======
+        "updated": 1565702495.0
+>>>>>>> 8ec268faaf7904e9179a40cafdfaa567592116aa
+>>>>>>> 4a733e891a2d6c92c86fdad0aa2b39393688dad6
+    },
+    "airQ": {
+        "url": "https://github.com/itzmeanjan/airQ",
+        "description": "A near real time Air Quality Indicator, written in Julia with ❤️",
+        "lang": "Julia",
+        "langColor": "#a270ba",
+<<<<<<< HEAD
+        "updated": 1566483583.0
+=======
+<<<<<<< HEAD
+        "updated": 1565544796.0
+=======
+        "updated": 1565701126.0
+>>>>>>> 4a733e891a2d6c92c86fdad0aa2b39393688dad6
+    },
+    "streamZ": {
+        "url": "https://github.com/itzmeanjan/streamZ",
+        "description": "A simple video streaming application made with Dart, JavaScript, HTML, CSS & ❤️",
+        "lang": "Dart",
+        "langColor": "#00B4AB",
+<<<<<<< HEAD
         "updated": 1566361159.0
+=======
+        "updated": 1565688587.0
+>>>>>>> 8ec268faaf7904e9179a40cafdfaa567592116aa
+>>>>>>> 4a733e891a2d6c92c86fdad0aa2b39393688dad6
     },
     "itzmeanjan.in": {
         "url": "https://github.com/itzmeanjan/itzmeanjan.in",
