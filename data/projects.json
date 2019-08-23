@@ -4,28 +4,28 @@
         "description": "Works on Air Quality Indication Dataset collected by airQ to give deeper insight, written with ❤️ using Python",
         "lang": "Python",
         "langColor": "#3572A5",
-        "updated": 1565702495.0
+        "updated": 1566491492.0
     },
     "airQ": {
         "url": "https://github.com/itzmeanjan/airQ",
         "description": "A near real time Air Quality Indicator, written in Julia with ❤️",
         "lang": "Julia",
         "langColor": "#a270ba",
-        "updated": 1565701126.0
+        "updated": 1566483583.0
     },
     "streamZ": {
         "url": "https://github.com/itzmeanjan/streamZ",
         "description": "A simple video streaming application made with Dart, JavaScript, HTML, CSS & ❤️",
         "lang": "Dart",
         "langColor": "#00B4AB",
-        "updated": 1565688587.0
+        "updated": 1566361159.0
     },
     "itzmeanjan.in": {
         "url": "https://github.com/itzmeanjan/itzmeanjan.in",
         "description": "A simple to follow guide, for deploying your website on Amazon LightSail",
         "lang": "HTML",
         "langColor": "#e34c26",
-        "updated": 1565462218.0
+        "updated": 1565804237.0
     },
     "itzmeanjan.github.io": {
         "url": "https://github.com/itzmeanjan/itzmeanjan.github.io",
