@@ -1,58 +1,31 @@
 {
+    "itzmeanjan.in": {
+        "url": "https://github.com/itzmeanjan/itzmeanjan.in",
+        "description": "A simple to follow guide, for deploying your website on Amazon LightSail",
+        "lang": "HTML",
+        "langColor": "#e34c26",
+        "updated": 1566584636.0
+    },
     "airQ-insight": {
         "url": "https://github.com/itzmeanjan/airQ-insight",
         "description": "Works on Air Quality Indication Dataset collected by airQ to give deeper insight, written with ❤️ using Python",
         "lang": "Python",
         "langColor": "#3572A5",
-<<<<<<< HEAD
-        "updated": 1566491492.0
-=======
-<<<<<<< HEAD
-        "updated": 1565587645.0
-    },
-    "streamZ": {
-        "url": "https://github.com/itzmeanjan/streamZ",
-        "description": "A simple video streaming application made with Dart, JavaScript, HTML, CSS & ❤️",
-        "lang": "Dart",
-        "langColor": "#00B4AB",
-        "updated": 1565546843.0
-=======
-        "updated": 1565702495.0
->>>>>>> 8ec268faaf7904e9179a40cafdfaa567592116aa
->>>>>>> 4a733e891a2d6c92c86fdad0aa2b39393688dad6
+        "updated": 1566563232.0
     },
     "airQ": {
         "url": "https://github.com/itzmeanjan/airQ",
         "description": "A near real time Air Quality Indicator, written in Julia with ❤️",
         "lang": "Julia",
         "langColor": "#a270ba",
-<<<<<<< HEAD
-        "updated": 1566483583.0
-=======
-<<<<<<< HEAD
-        "updated": 1565544796.0
-=======
-        "updated": 1565701126.0
->>>>>>> 4a733e891a2d6c92c86fdad0aa2b39393688dad6
+        "updated": 1566562643.0
     },
     "streamZ": {
         "url": "https://github.com/itzmeanjan/streamZ",
         "description": "A simple video streaming application made with Dart, JavaScript, HTML, CSS & ❤️",
         "lang": "Dart",
         "langColor": "#00B4AB",
-<<<<<<< HEAD
         "updated": 1566361159.0
-=======
-        "updated": 1565688587.0
->>>>>>> 8ec268faaf7904e9179a40cafdfaa567592116aa
->>>>>>> 4a733e891a2d6c92c86fdad0aa2b39393688dad6
-    },
-    "itzmeanjan.in": {
-        "url": "https://github.com/itzmeanjan/itzmeanjan.in",
-        "description": "A simple to follow guide, for deploying your website on Amazon LightSail",
-        "lang": "HTML",
-        "langColor": "#e34c26",
-        "updated": 1565804237.0
     },
     "itzmeanjan.github.io": {
         "url": "https://github.com/itzmeanjan/itzmeanjan.github.io",
