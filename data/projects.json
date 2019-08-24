@@ -1,10 +1,17 @@
 {
+    "streamZ": {
+        "url": "https://github.com/itzmeanjan/streamZ",
+        "description": "A simple video streaming application made with Dart, JavaScript, HTML, CSS & ❤️",
+        "lang": "Dart",
+        "langColor": "#00B4AB",
+        "updated": 1566585289.0
+    },
     "itzmeanjan.in": {
         "url": "https://github.com/itzmeanjan/itzmeanjan.in",
         "description": "A simple to follow guide, for deploying your website on Amazon LightSail",
         "lang": "HTML",
         "langColor": "#e34c26",
-        "updated": 1566584636.0
+        "updated": 1566584929.0
     },
     "airQ-insight": {
         "url": "https://github.com/itzmeanjan/airQ-insight",
@@ -19,13 +26,6 @@
         "lang": "Julia",
         "langColor": "#a270ba",
         "updated": 1566562643.0
-    },
-    "streamZ": {
-        "url": "https://github.com/itzmeanjan/streamZ",
-        "description": "A simple video streaming application made with Dart, JavaScript, HTML, CSS & ❤️",
-        "lang": "Dart",
-        "langColor": "#00B4AB",
-        "updated": 1566361159.0
     },
     "itzmeanjan.github.io": {
         "url": "https://github.com/itzmeanjan/itzmeanjan.github.io",
