@@ -1,212 +1,322 @@
 {
+    "itzmeanjan.in": {
+        "url": "https://github.com/itzmeanjan/itzmeanjan.in",
+        "description": "A simple to follow guide, for deploying your website on Amazon LightSail",
+        "lang": "HTML",
+        "langColor": "#e34c26",
+        "fork": 0,
+        "star": 0,
+        "updated": 1566841755.0,
+        "license": "MIT License"
+    },
     "airQ-insight": {
         "url": "https://github.com/itzmeanjan/airQ-insight",
         "description": "Works on Air Quality Indication Dataset collected by airQ to give deeper insight, written with ❤️ using Python",
         "lang": "Python",
         "langColor": "#3572A5",
-        "updated": 1566745660.0
+        "fork": 0,
+        "star": 0,
+        "updated": 1566826616.0,
+        "license": "MIT License"
     },
     "airQ": {
         "url": "https://github.com/itzmeanjan/airQ",
         "description": "A near real time Air Quality Indicator, written in Julia with ❤️",
         "lang": "Julia",
         "langColor": "#a270ba",
-        "updated": 1566743867.0
-    },
-    "itzmeanjan.in": {
-        "url": "https://github.com/itzmeanjan/itzmeanjan.in",
-        "description": "A simple to follow guide, for deploying your website on Amazon LightSail",
-        "lang": "HTML",
-        "langColor": "#e34c26",
-        "updated": 1566669031.0
+        "fork": 2,
+        "star": 0,
+        "updated": 1566825920.0,
+        "license": "MIT License"
     },
     "streamZ": {
         "url": "https://github.com/itzmeanjan/streamZ",
         "description": "A simple video streaming application made with Dart, JavaScript, HTML, CSS & ❤️",
         "lang": "Dart",
         "langColor": "#00B4AB",
-        "updated": 1566585289.0
+        "fork": 15,
+        "star": 1,
+        "updated": 1566585289.0,
+        "license": "MIT License"
     },
     "itzmeanjan.github.io": {
         "url": "https://github.com/itzmeanjan/itzmeanjan.github.io",
         "description": "A website",
         "lang": "HTML",
         "langColor": "#e34c26",
-        "updated": 1563910438.0
+        "fork": 0,
+        "star": 0,
+        "updated": 1563910438.0,
+        "license": "MIT License"
     },
     "indian-railway": {
         "url": "https://github.com/itzmeanjan/indian-railway",
         "description": "A collection of utility Scripts, for manipulating Indian Railway's Running Train(s) Dataset i.e. Time Table, written with ❤️",
         "lang": "JavaScript",
         "langColor": "#f1e05a",
-        "updated": 1563819249.0
+        "fork": 0,
+        "star": 0,
+        "updated": 1563819249.0,
+        "license": "MIT License"
     },
     "vb_notice_reader": {
         "url": "https://github.com/itzmeanjan/vb_notice_reader",
         "description": "A simple App for fetching and displaying parsed notices from Visva-Bharati, Santiniketan's Official Website, made with ❤️ using Flutter",
         "lang": "Dart",
         "langColor": "#00B4AB",
-        "updated": 1563198079.0
+        "fork": 0,
+        "star": 0,
+        "updated": 1563198079.0,
+        "license": "MIT License"
     },
     "osm": {
         "url": "https://github.com/itzmeanjan/osm",
         "description": "A flutter package, helps you to integrate Open Street Map within your flutter app. Built with <3",
         "lang": "Dart",
         "langColor": "#00B4AB",
-        "updated": 1563197998.0
+        "fork": 0,
+        "star": 0,
+        "updated": 1563197998.0,
+        "license": "MIT License"
     },
     "weatherz-desktop": {
         "url": "https://github.com/itzmeanjan/weatherz-desktop",
         "description": "A simple JavaScript Desktop Application for fetching and displaying Weather Data of almost 6.36M places along with Maps 😉",
         "lang": "JavaScript",
         "langColor": "#f1e05a",
-        "updated": 1563127928.0
+        "fork": 1,
+        "star": 0,
+        "updated": 1563127928.0,
+        "license": "MIT License"
     },
     "countryAndWeather": {
         "url": "https://github.com/itzmeanjan/countryAndWeather",
         "description": "A collection of scripts for grabbing and processing detailed Country/ Place Record & Weather Data of 6.36M places, written in Python with ❤️",
         "lang": "Python",
         "langColor": "#3572A5",
-        "updated": 1562823161.0
+        "fork": 4,
+        "star": 1,
+        "updated": 1562823161.0,
+        "license": "MIT License"
     },
     "locatorz": {
         "url": "https://github.com/itzmeanjan/locatorz",
         "description": "An Android App, which lets you work on Location Data, built with ❤️ using Flutter",
         "lang": "Dart",
         "langColor": "#00B4AB",
-        "updated": 1561313295.0
+        "fork": 29,
+        "star": 6,
+        "updated": 1561313295.0,
+        "license": "MIT License"
     },
     "intent": {
         "url": "https://github.com/itzmeanjan/intent",
         "description": "A simple Flutter plugin to deal with Android Intents, written with ❤️",
         "lang": "Dart",
         "langColor": "#00B4AB",
-        "updated": 1561308650.0
+        "fork": 38,
+        "star": 1,
+        "updated": 1561308650.0,
+        "license": "MIT License"
     },
     "vb_noticeboard": {
         "url": "https://github.com/itzmeanjan/vb_noticeboard",
         "description": "A simple Dart wrapper for fetching, parsing and extracting notices from Visva-Bharati, Santiniketan's Official website",
         "lang": "Dart",
         "langColor": "#00B4AB",
-        "updated": 1559807848.0
+        "fork": 0,
+        "star": 0,
+        "updated": 1559807848.0,
+        "license": "MIT License"
     },
     "fCreate": {
         "url": "https://github.com/itzmeanjan/fCreate",
         "description": "A Simple EYE Test Game, built using Flutter CustomPainter, with ❤️",
         "lang": "Dart",
         "langColor": "#00B4AB",
-        "updated": 1559807561.0
+        "fork": 5,
+        "star": 3,
+        "updated": 1559807561.0,
+        "license": "MIT License"
     },
     "locate": {
         "url": "https://github.com/itzmeanjan/locate",
         "description": "A Flutter plugin to work with Android Location Services.",
         "lang": "Kotlin",
         "langColor": "#F18E33",
-        "updated": 1559402052.0
+        "fork": 6,
+        "star": 2,
+        "updated": 1559402052.0,
+        "license": "MIT License"
     },
     "translate": {
         "url": "https://github.com/itzmeanjan/translate",
         "description": "A simple to use Dart package, for detecting & translating text/ html pages using Yandex.Translate API",
         "lang": "Dart",
         "langColor": "#00B4AB",
-        "updated": 1559401026.0
+        "fork": 3,
+        "star": 0,
+        "updated": 1559401026.0,
+        "license": "MIT License"
     },
     "countryIO": {
         "url": "https://github.com/itzmeanjan/countryIO",
         "description": "A simple country.io data parser, written with ❤️ using Dart :)",
         "lang": "Dart",
         "langColor": "#00B4AB",
-        "updated": 1559141667.0
+        "fork": 1,
+        "star": 0,
+        "updated": 1559141667.0,
+        "license": "MIT License"
     },
     "transferZ": {
         "url": "https://github.com/itzmeanjan/transferZ",
         "description": "A simple Android Application built with ❤️ using Flutter, for transferring files between devices.",
         "lang": "Dart",
         "langColor": "#00B4AB",
-        "updated": 1558809339.0
+        "fork": 22,
+        "star": 6,
+        "updated": 1558809339.0,
+        "license": "MIT License"
     },
     "weatherz": {
         "url": "https://github.com/itzmeanjan/weatherz",
         "description": "Another Weather App, built with Flutter ;)",
         "lang": "Dart",
         "langColor": "#00B4AB",
-        "updated": 1557992172.0
+        "fork": 2,
+        "star": 1,
+        "updated": 1557992172.0,
+        "license": "MIT License"
     },
     "osm_tile_fetcher": {
         "url": "https://github.com/itzmeanjan/osm_tile_fetcher",
         "description": "A Dart Implementation of Open Street Map Tile Fetcher.",
         "lang": "Dart",
         "langColor": "#00B4AB",
-        "updated": 1557742915.0
+        "fork": 0,
+        "star": 0,
+        "updated": 1557742915.0,
+        "license": "MIT License"
     },
     "trackm3": {
         "url": "https://github.com/itzmeanjan/trackm3",
         "description": "A Live Location Tracker built with Electron, Express & Flutter",
         "lang": "JavaScript",
         "langColor": "#f1e05a",
-        "updated": 1557314031.0
+        "fork": 2,
+        "star": 2,
+        "updated": 1557314031.0,
+        "license": "MIT License"
     },
     "sensorz": {
         "url": "https://github.com/itzmeanjan/sensorz",
         "description": "A Simple Flutter Android App, which displays Sensor Data.",
         "lang": "Dart",
         "langColor": "#00B4AB",
-        "updated": 1557256385.0
+        "fork": 41,
+        "star": 14,
+        "updated": 1557256385.0,
+        "license": "MIT License"
     },
     "astroZ": {
         "url": "https://github.com/itzmeanjan/astroZ",
         "description": "An Android App, shows Astronomy Picture of the Day, built with ❤️ using Flutter :)",
         "lang": "Dart",
         "langColor": "#00B4AB",
-        "updated": 1556977028.0
+        "fork": 19,
+        "star": 4,
+        "updated": 1556977028.0,
+        "license": "MIT License"
     },
     "transferZ-desktop": {
         "url": "https://github.com/itzmeanjan/transferZ-desktop",
         "description": "A Desktop client for transferZ, file transfer app, built with Electron and Node",
         "lang": "JavaScript",
         "langColor": "#f1e05a",
-        "updated": 1556475263.0
+        "fork": 0,
+        "star": 0,
+        "updated": 1556475263.0,
+        "license": "MIT License"
     },
     "mapZ": {
         "url": "https://github.com/itzmeanjan/mapZ",
         "description": "A Geospatial Application",
         "lang": "Python",
         "langColor": "#3572A5",
-        "updated": 1555417489.0
+        "fork": 12,
+        "star": 3,
+        "updated": 1555417489.0,
+        "license": "MIT License"
     },
     "apod_fetcher": {
         "url": "https://github.com/itzmeanjan/apod_fetcher",
         "description": "A Pythonic wayout to fetch Astronomy Picture of the Day from NASA and populate Database.",
         "lang": "Python",
         "langColor": "#3572A5",
-        "updated": 1554833836.0
+        "fork": 0,
+        "star": 0,
+        "updated": 1554833836.0,
+        "license": "MIT License"
     },
     "apod_server": {
         "url": "https://github.com/itzmeanjan/apod_server",
         "description": "A simple Express App to be used as API endpoint to facilitate query of Astronomy Picture of the Day",
         "lang": "JavaScript",
         "langColor": "#f1e05a",
-        "updated": 1554833781.0
+        "fork": 0,
+        "star": 0,
+        "updated": 1554833781.0,
+        "license": "MIT License"
     },
     "pymet": {
         "url": "https://github.com/itzmeanjan/pymet",
         "description": "A simple to use Python Interface for fetching MET Norway Weather Data.",
         "lang": "Python",
         "langColor": "#3572A5",
-        "updated": 1545845751.0
+        "fork": 0,
+        "star": 0,
+        "updated": 1545845751.0,
+        "license": "MIT License"
     },
     "pynotif": {
         "url": "https://github.com/itzmeanjan/pynotif",
         "description": "A very simple to use Python API for accessing native notification service on Linux",
         "lang": "C",
         "langColor": "#555555",
-        "updated": 1545759115.0
+        "fork": 0,
+        "star": 0,
+        "updated": 1545759115.0,
+        "license": "MIT License"
     },
     "imd_weather": {
         "url": "https://github.com/itzmeanjan/imd_weather",
         "description": "A simple python API, helps you to fetch City Weather data from Indian Meteorological Dept.",
         "lang": "Python",
         "langColor": "#3572A5",
-        "updated": 1545591535.0
+        "fork": 0,
+        "star": 0,
+        "updated": 1545591535.0,
+        "license": "MIT License"
+    },
+    "pyway2sms": {
+        "url": "https://github.com/itzmeanjan/pyway2sms",
+        "description": "Pythonic API for accessing Way2SMS, a programmable SMS sending service in India, features",
+        "lang": "Python",
+        "langColor": "#3572A5",
+        "fork": 0,
+        "star": 0,
+        "updated": 1545383804.0,
+        "license": "MIT License"
+    },
+    "yandex_translate": {
+        "url": "https://github.com/itzmeanjan/yandex_translate",
+        "description": "Yandex.Translate Service python API",
+        "lang": "Python",
+        "langColor": "#3572A5",
+        "fork": 0,
+        "star": 0,
+        "updated": 1545322725.0,
+        "license": "MIT License"
     }
 }
