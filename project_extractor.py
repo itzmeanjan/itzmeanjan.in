@@ -85,7 +85,8 @@ def extractIt(dataObject, username: str, targetClass: str = 'col-10 col-lg-9 d-i
         '''
         def __findLicense(element) -> str:
             try:
-                return element.findChild('div', {'class': 'f6 text-gray mt-2'}).findAll('span', {'class': 'mr-3'})[1].text.strip()
+                return reduce(lambda acc, cur: acc + cur.text.strip(), filter(lambda e: ''.join(e.get('class')) == 'mr-3', element.findChild(
+                    'div', {'class': 'f6 text-gray mt-2'}).findAll('span', {'class': 'mr-3'})), '')
             except Exception:
                 return ''
 
