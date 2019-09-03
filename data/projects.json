@@ -6,7 +6,7 @@
         "langColor": "#3572A5",
         "fork": 0,
         "star": 0,
-        "updated": 1567082738.0,
+        "updated": 1567441746.0,
         "license": "MIT License",
         "forkedFrom": ""
     },
@@ -17,7 +17,18 @@
         "langColor": "#a270ba",
         "fork": 0,
         "star": 2,
-        "updated": 1567082155.0,
+        "updated": 1567438338.0,
+        "license": "MIT License",
+        "forkedFrom": ""
+    },
+    "corporateZ": {
+        "url": "https://github.com/itzmeanjan/corporateZ",
+        "description": "Data analysis done on Ministry of Corporate Affairs, Govt. of India's open data to get deeper insight, with ❤️",
+        "lang": "Python",
+        "langColor": "#3572A5",
+        "fork": 0,
+        "star": 0,
+        "updated": 1567438112.0,
         "license": "MIT License",
         "forkedFrom": ""
     },
@@ -28,7 +39,7 @@
         "langColor": "#e34c26",
         "fork": 0,
         "star": 0,
-        "updated": 1566968866.0,
+        "updated": 1567175914.0,
         "license": "MIT License",
         "forkedFrom": ""
     },
@@ -38,7 +49,7 @@
         "lang": "Dart",
         "langColor": "#00B4AB",
         "fork": 1,
-        "star": 16,
+        "star": 17,
         "updated": 1566585289.0,
         "license": "MIT License",
         "forkedFrom": ""
@@ -71,7 +82,7 @@
         "lang": "Dart",
         "langColor": "#00B4AB",
         "fork": 0,
-        "star": 0,
+        "star": 1,
         "updated": 1563198079.0,
         "license": "MIT License",
         "forkedFrom": ""
@@ -82,7 +93,7 @@
         "lang": "Dart",
         "langColor": "#00B4AB",
         "fork": 0,
-        "star": 0,
+        "star": 1,
         "updated": 1563197998.0,
         "license": "MIT License",
         "forkedFrom": ""
@@ -115,7 +126,7 @@
         "lang": "Dart",
         "langColor": "#00B4AB",
         "fork": 6,
-        "star": 29,
+        "star": 30,
         "updated": 1561313295.0,
         "license": "MIT License",
         "forkedFrom": ""
@@ -126,7 +137,7 @@
         "lang": "Dart",
         "langColor": "#00B4AB",
         "fork": 1,
-        "star": 38,
+        "star": 39,
         "updated": 1561308650.0,
         "license": "MIT License",
         "forkedFrom": ""
@@ -137,7 +148,7 @@
         "lang": "Dart",
         "langColor": "#00B4AB",
         "fork": 0,
-        "star": 0,
+        "star": 1,
         "updated": 1559807848.0,
         "license": "MIT License",
         "forkedFrom": ""
@@ -148,7 +159,7 @@
         "lang": "Dart",
         "langColor": "#00B4AB",
         "fork": 3,
-        "star": 5,
+        "star": 6,
         "updated": 1559807561.0,
         "license": "MIT License",
         "forkedFrom": ""
@@ -170,7 +181,7 @@
         "lang": "Dart",
         "langColor": "#00B4AB",
         "fork": 0,
-        "star": 3,
+        "star": 4,
         "updated": 1559401026.0,
         "license": "MIT License",
         "forkedFrom": ""
@@ -181,7 +192,7 @@
         "lang": "Dart",
         "langColor": "#00B4AB",
         "fork": 0,
-        "star": 1,
+        "star": 2,
         "updated": 1559141667.0,
         "license": "MIT License",
         "forkedFrom": ""
@@ -191,8 +202,8 @@
         "description": "A simple Android Application built with ❤️ using Flutter, for transferring files between devices.",
         "lang": "Dart",
         "langColor": "#00B4AB",
-        "fork": 6,
-        "star": 22,
+        "fork": 7,
+        "star": 23,
         "updated": 1558809339.0,
         "license": "MIT License",
         "forkedFrom": ""
@@ -203,7 +214,7 @@
         "lang": "Dart",
         "langColor": "#00B4AB",
         "fork": 1,
-        "star": 2,
+        "star": 3,
         "updated": 1557992172.0,
         "license": "MIT License",
         "forkedFrom": ""
@@ -214,7 +225,7 @@
         "lang": "Dart",
         "langColor": "#00B4AB",
         "fork": 0,
-        "star": 0,
+        "star": 1,
         "updated": 1557742915.0,
         "license": "MIT License",
         "forkedFrom": ""
@@ -236,7 +247,7 @@
         "lang": "Dart",
         "langColor": "#00B4AB",
         "fork": 14,
-        "star": 41,
+        "star": 42,
         "updated": 1557256385.0,
         "license": "MIT License",
         "forkedFrom": ""
@@ -247,7 +258,7 @@
         "lang": "Dart",
         "langColor": "#00B4AB",
         "fork": 4,
-        "star": 19,
+        "star": 20,
         "updated": 1556977028.0,
         "license": "MIT License",
         "forkedFrom": ""
