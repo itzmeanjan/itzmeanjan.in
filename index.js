@@ -6,7 +6,16 @@
 
 const express = require('express');
 const http = require('http');
+const https = require('https');
+const readFile = require('fs').readFileSync;
 const app = express();
+
+// enabled https ;)
+const options = {
+  key: readFile('/etc/letsencrypt/live/itzmeanjan.in/privkey.pem'),
+  cert: readFile('/etc/letsencrypt/live/itzmeanjan.in/fullchain.pem'),
+  ca: readFile('/etc/letsencrypt/live/itzmeanjan.in/chain.pem')
+}
 
 // good to set it, when deploying in production
 app.set('env', 'production');
@@ -138,5 +147,10 @@ app.get('/blog/post.js', (req, res) => {
     (err) => { res.end(); });
 });
 
-http.createServer(app).listen(8000, '0.0.0.0',
+http.createServer((req, res) => {
+  res.writeHead(301, { "Location": "https://" + req.headers['host'] + req.url }).end();
+}).listen(8000, '0.0.0.0',
+  () => { console.log('[+]Server started\n') });
+
+https.createServer(options, app).listen(8000, '0.0.0.0',
   () => { console.log('[+]Server started\n') });
