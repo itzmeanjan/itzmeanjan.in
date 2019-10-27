@@ -10,6 +10,9 @@ const https = require('https');
 const readFile = require('fs').readFileSync;
 const app = express();
 
+// good to set it, when deploying in production
+app.set('env', 'production');
+
 // enabled https ;)
 const options = {
   key: readFile('/etc/letsencrypt/live/itzmeanjan.in/privkey.pem'),
@@ -17,8 +20,12 @@ const options = {
   ca: readFile('/etc/letsencrypt/live/itzmeanjan.in/chain.pem')
 }
 
-// good to set it, when deploying in production
-app.set('env', 'production');
+// redirects all HTTP traffic to HTTPS
+let http2https = express.Router();
+http2https.get('*', (req, res) => {
+  res.writeHead(301, { "Location": "https://" + req.headers['host'] + req.url });
+  res.end();
+});
 
 app.get('/', (req, res) => {
   console.log(`GET / ${req.ip} ${Date().toString()}`);
@@ -147,11 +154,14 @@ app.get('/blog/post.js', (req, res) => {
     (err) => { res.end(); });
 });
 
-
-http.createServer((req, res) => {
-   res.writeHead(301, {"Location": "https://itzmeanjan.in/"});
-   res.end();
-}).listen(8001, '0.0.0.0',
+// will run a handler server on 8001 port, so that
+// all traffics incoming via port 80 ( which is HTTP port )
+// gets redirected into port 443 ( which is HTTPS )
+// 
+// Any previous link, spread on internet
+// need to be handler properly, which is why
+// I'm using this HTTP traffic handler server 
+http.createServer(http2https).listen(8001, '0.0.0.0',
   () => { console.log('[+]HTTP Server started\n') });
 
 https.createServer(options, app).listen(8000, '0.0.0.0',
