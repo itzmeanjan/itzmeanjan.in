@@ -147,10 +147,13 @@ app.get('/blog/post.js', (req, res) => {
     (err) => { res.end(); });
 });
 
+
 http.createServer((req, res) => {
-  res.writeHead(301, { "Location": "https://" + req.headers['host'] + req.url }).end();
-}).listen(8000, '0.0.0.0',
-  () => { console.log('[+]Server started\n') });
+   res.writeHead(301, {"Location": "https://itzmeanjan.in/"});
+   res.end();
+}).listen(8001, '0.0.0.0',
+  () => { console.log('[+]HTTP Server started\n') });
 
 https.createServer(options, app).listen(8000, '0.0.0.0',
-  () => { console.log('[+]Server started\n') });
+  () => { console.log('[+]HTTPS Server started\n') });
+

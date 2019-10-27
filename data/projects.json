@@ -1,12 +1,12 @@
 {
-    "indian-railway": {
-        "url": "https://github.com/itzmeanjan/indian-railway",
-        "description": "Exploring Indian Railways time table dataset, with ❤️",
-        "lang": "Python",
-        "langColor": "#3572A5",
+    "itzmeanjan.in": {
+        "url": "https://github.com/itzmeanjan/itzmeanjan.in",
+        "description": "A simple to follow guide, for deploying your website on Amazon LightSail",
+        "lang": "HTML",
+        "langColor": "#e34c26",
         "fork": 0,
         "star": 0,
-        "updated": 1572060514.0,
+        "updated": 1572154745.0,
         "license": "MIT License",
         "forkedFrom": ""
     },
@@ -17,7 +17,18 @@
         "langColor": "#3572A5",
         "fork": 0,
         "star": 3,
-        "updated": 1571987670.0,
+        "updated": 1572103868.0,
+        "license": "MIT License",
+        "forkedFrom": ""
+    },
+    "indian-railway": {
+        "url": "https://github.com/itzmeanjan/indian-railway",
+        "description": "Exploring Indian Railways time table dataset, with ❤️",
+        "lang": "Python",
+        "langColor": "#3572A5",
+        "fork": 0,
+        "star": 0,
+        "updated": 1572102667.0,
         "license": "MIT License",
         "forkedFrom": ""
     },
@@ -84,17 +95,6 @@
         "fork": 1,
         "star": 18,
         "updated": 1568991471.0,
-        "license": "MIT License",
-        "forkedFrom": ""
-    },
-    "itzmeanjan.in": {
-        "url": "https://github.com/itzmeanjan/itzmeanjan.in",
-        "description": "A simple to follow guide, for deploying your website on Amazon LightSail",
-        "lang": "HTML",
-        "langColor": "#e34c26",
-        "fork": 0,
-        "star": 0,
-        "updated": 1567519427.0,
         "license": "MIT License",
         "forkedFrom": ""
     },
