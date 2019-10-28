@@ -20,6 +20,21 @@ const options = {
   ca: readFile('/etc/letsencrypt/live/itzmeanjan.in/chain.pem')
 }
 
+// this middleware will help me logging access stat,
+// so that later on I can analyze site traffic ( if I ever need to :) )
+function writeLog(req, res, next) {
+  console.log(`${req.method} | ${req.url} | ${req.ip} | ${Date().toString()}`);
+  next();
+}
+
+// middleware set, all incoming requests should be
+// now passing via this middleware
+// which will help me in logging website
+// traffic
+//
+// it helped me in redusing size of this script
+app.use(writeLog);
+
 // redirects all HTTP traffic to HTTPS
 let http2https = express.Router();
 http2https.get('*', (req, res) => {
@@ -28,7 +43,6 @@ http2https.get('*', (req, res) => {
 });
 
 app.get('/', (req, res) => {
-  console.log(`GET / ${req.ip} ${Date().toString()}`);
   res.status(200).contentType('html').sendFile(
     './pages/index.html', { root: __dirname }, (err) => {
       if (err !== undefined && err !== null)
@@ -37,7 +51,6 @@ app.get('/', (req, res) => {
 });
 
 app.get('/blog', (req, res) => {
-  console.log(`GET /blog ${req.ip} ${Date().toString()}`);
   res.status(200).contentType('html').sendFile(
     './pages/blog.html', { root: __dirname }, (err) => {
       if (err !== undefined && err !== null)
@@ -46,7 +59,6 @@ app.get('/blog', (req, res) => {
 });
 
 app.get('/contact', (req, res) => {
-  console.log(`GET /contact ${req.ip} ${Date().toString()}`);
   res.status(200).contentType('html').sendFile(
     './pages/contact.html', { root: __dirname }, (err) => {
       if (err !== undefined && err !== null)
@@ -55,7 +67,6 @@ app.get('/contact', (req, res) => {
 });
 
 app.get('/data', (req, res) => {
-  console.log(`GET /data ${req.ip} ${Date().toString()}`);
   res.status(200).contentType('html').sendFile(
     './pages/data.html', { root: __dirname }, (err) => {
       if (err !== undefined && err !== null)
@@ -64,7 +75,6 @@ app.get('/data', (req, res) => {
 });
 
 app.get('/projects', (req, res) => {
-  console.log(`GET /projects ${req.ip} ${Date().toString()}`);
   res.status(200).contentType('html').sendFile(
     './pages/projects.html', { root: __dirname }, (err) => {
       if (err !== undefined && err !== null)
@@ -77,22 +87,20 @@ app.get('/projects', (req, res) => {
 // well I know, there're thousands of services, providing same/ much more functionalities
 // but still it's a small venture
 app.get('/ip', (req, res) => {
-  console.log(`${req.method} ${req.path} ${req.ip} ${Date().toString()}`);
-  res.status(200).contentType('application/json').send(
+  res.status(200).contentType('json').json(
     {
       ip: req.ip
     }
-  ).end();
+  );
+  res.end();
 });
 
 app.get('/blog/post_:id.json', (req, res) => {
-  console.log(`GET /blog/post_${req.params.id}.json ${req.ip} ${Date().toString()}`);
   res.status(200).sendFile(`./blog/post_${req.params.id}.json`, { root: __dirname },
     (err) => { res.end(); });
 });
 
 app.get('/blog/post_:id', (req, res) => {
-  console.log(`GET /blog/post_${req.params.id} ${req.ip} ${Date().toString()}`);
   res.status(200).contentType('html').sendFile(
     './pages/post.html', { root: __dirname }, (err) => {
       if (err !== undefined && err !== null)
@@ -101,57 +109,57 @@ app.get('/blog/post_:id', (req, res) => {
 });
 
 app.get('(/blog)?/common.css', (req, res) => {
-  console.log(`GET ${req.path} ${req.ip} ${Date().toString()}`);
   res.status(200).sendFile('./styles/common.css', { root: __dirname },
     (err) => { res.end(); });
 });
 
 app.get('/blog/post.css', (req, res) => {
-  console.log(`GET /blog/post.css ${req.ip} ${Date().toString()}`);
   res.status(200).sendFile('./styles/post.css', { root: __dirname },
     (err) => { res.end(); });
 });
 
 app.get('/myImage.jpg', (req, res) => {
-  console.log(`GET /myImage.jpg ${req.ip} ${Date().toString()}`);
   res.status(200).sendFile('./images/myImage.jpg', { root: __dirname },
     (err) => { res.end(); });
 });
 
 app.get('/myResume.pdf', (req, res) => {
-  console.log(`GET /myResume.pdf ${req.ip} ${Date().toString()}`);
   res.status(200).sendFile('./cv/myResume.pdf', { root: __dirname },
     (err) => { res.end(); });
 });
 
 app.get('/projects.json', (req, res) => {
-  console.log(`GET /projects.json ${req.ip} ${Date().toString()}`);
   res.status(200).sendFile('./data/projects.json', { root: __dirname },
     (err) => { res.end(); });
 });
 
 app.get('/projects.js', (req, res) => {
-  console.log(`GET /projects.js ${req.ip} ${Date().toString()}`);
   res.status(200).sendFile('./scripts/projects.js', { root: __dirname },
     (err) => { res.end(); });
 });
 
 app.get('/blog.json', (req, res) => {
-  console.log(`GET /blog.json ${req.ip} ${Date().toString()}`);
   res.status(200).sendFile('./data/blog.json', { root: __dirname },
     (err) => { res.end(); });
 });
 
 app.get('/blog.js', (req, res) => {
-  console.log(`GET /blog.js ${req.ip} ${Date().toString()}`);
   res.status(200).sendFile('./scripts/blog.js', { root: __dirname },
     (err) => { res.end(); });
 });
 
 app.get('/blog/post.js', (req, res) => {
-  console.log(`GET /blog/post.js ${req.ip} ${Date().toString()}`);
   res.status(200).sendFile('./scripts/post.js', { root: __dirname },
     (err) => { res.end(); });
+});
+
+// any GET request, which is not supported
+// i.e. request for a wrong path, will make
+// them receive following text/plain message,
+// with 404 content type
+app.get('*', (req, res) => {
+  res.status(404).contentType('text/plain').write("You're on wrong track :)");
+  res.end();
 });
 
 // will run a handler server on 8001 port, so that
@@ -166,4 +174,3 @@ http.createServer(http2https).listen(8001, '0.0.0.0',
 
 https.createServer(options, app).listen(8000, '0.0.0.0',
   () => { console.log('[+]HTTPS Server started\n') });
-
