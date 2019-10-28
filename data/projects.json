@@ -1,4 +1,26 @@
 {
+    "locatorz": {
+        "url": "https://github.com/itzmeanjan/locatorz",
+        "description": "An Android App, which lets you work on Location Data, built with ❤️ using Flutter",
+        "lang": "Dart",
+        "langColor": "#00B4AB",
+        "fork": 7,
+        "star": 30,
+        "updated": 1572169326.0,
+        "license": "MIT License",
+        "forkedFrom": ""
+    },
+    "itzmeanjan.github.io": {
+        "url": "https://github.com/itzmeanjan/itzmeanjan.github.io",
+        "description": "A website",
+        "lang": "HTML",
+        "langColor": "#e34c26",
+        "fork": 0,
+        "star": 0,
+        "updated": 1572166027.0,
+        "license": "MIT License",
+        "forkedFrom": ""
+    },
     "itzmeanjan.in": {
         "url": "https://github.com/itzmeanjan/itzmeanjan.in",
         "description": "A simple to follow guide, for deploying your website on Amazon LightSail",
@@ -6,7 +28,7 @@
         "langColor": "#e34c26",
         "fork": 0,
         "star": 0,
-        "updated": 1572154745.0,
+        "updated": 1572161554.0,
         "license": "MIT License",
         "forkedFrom": ""
     },
@@ -38,7 +60,7 @@
         "lang": "Python",
         "langColor": "#3572A5",
         "fork": 1,
-        "star": 10,
+        "star": 11,
         "updated": 1571834452.0,
         "license": "MIT License",
         "forkedFrom": ""
@@ -51,17 +73,6 @@
         "fork": 0,
         "star": 4,
         "updated": 1570598115.0,
-        "license": "MIT License",
-        "forkedFrom": ""
-    },
-    "itzmeanjan.github.io": {
-        "url": "https://github.com/itzmeanjan/itzmeanjan.github.io",
-        "description": "A website",
-        "lang": "HTML",
-        "langColor": "#e34c26",
-        "fork": 0,
-        "star": 0,
-        "updated": 1570550803.0,
         "license": "MIT License",
         "forkedFrom": ""
     },
@@ -139,17 +150,6 @@
         "fork": 1,
         "star": 4,
         "updated": 1562823161.0,
-        "license": "MIT License",
-        "forkedFrom": ""
-    },
-    "locatorz": {
-        "url": "https://github.com/itzmeanjan/locatorz",
-        "description": "An Android App, which lets you work on Location Data, built with ❤️ using Flutter",
-        "lang": "Dart",
-        "langColor": "#00B4AB",
-        "fork": 7,
-        "star": 30,
-        "updated": 1561313295.0,
         "license": "MIT License",
         "forkedFrom": ""
     },
