@@ -76,6 +76,14 @@ app.get('/projects', (req, res) => {
     });
 });
 
+app.get('/robots.txt', (req, res) => {
+  res.status(200).contentType('text/plain').sendFile(
+    './data/robots.txt', { root: __dirname }, (err) => {
+      if (err !== undefined && err !== null)
+        res.send('Something went wrong').end();
+    });
+});
+
 // a GET request at this path, will simply return IP address of client
 // simply made so that people can check their own public IP address if in need
 // well I know, there're thousands of services, providing same/ much more functionalities
