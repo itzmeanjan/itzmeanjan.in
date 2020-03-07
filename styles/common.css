@@ -17,7 +17,7 @@ body{
 }
 
 .childDiv{
-  background-color: #263e40;
+  background-color: #373e45;
   border-radius: 2vmin;
   width: 90%;
   padding-top: .1vmax;
@@ -39,7 +39,6 @@ p{
   color: powderblue;
   margin: 2vmin;
   font-family: 'Courier New', Courier, monospace;
-  font-style: italic;
 }
 
 .simpleLink:link{

@@ -15,10 +15,11 @@ app.set('env', 'production');
 
 // enabled https ;)
 const options = {
-  key: readFile('/etc/letsencrypt/live/itzmeanjan.in/privkey.pem'),
-  cert: readFile('/etc/letsencrypt/live/itzmeanjan.in/fullchain.pem'),
-  ca: readFile('/etc/letsencrypt/live/itzmeanjan.in/chain.pem')
+  key: readFile('~/.sslcert/itzmeanjan.in/privkey.pem'),
+  cert: readFile('~/.sslcert/itzmeanjan.in/fullchain.pem'),
+  ca: readFile('~/.sslcert/itzmeanjan.in/chain.pem')
 }
+
 
 // this middleware will help me logging access stat,
 // so that later on I can analyze site traffic ( if I ever need to :) )
@@ -60,13 +61,6 @@ app.get('/contact', (req, res) => {
     });
 });
 
-app.get('/data', (req, res) => {
-  res.status(200).contentType('html').sendFile(
-    './pages/data.html', { root: __dirname }, (err) => {
-      if (err !== undefined && err !== null)
-        res.send('Something went wrong').end();
-    });
-});
 
 app.get('/projects', (req, res) => {
   res.status(200).contentType('html').sendFile(
@@ -97,26 +91,8 @@ app.get('/ip', (req, res) => {
   res.end();
 });
 
-app.get('/blog/post_:id.json', (req, res) => {
-  res.status(200).sendFile(`./blog/post_${req.params.id}.json`, { root: __dirname },
-    (err) => { res.end(); });
-});
-
-app.get('/blog/post_:id', (req, res) => {
-  res.status(200).contentType('html').sendFile(
-    './pages/post.html', { root: __dirname }, (err) => {
-      if (err !== undefined && err !== null)
-        res.send('Something went wrong').end();
-    });
-});
-
 app.get('(/blog)?/common.css', (req, res) => {
   res.status(200).sendFile('./styles/common.css', { root: __dirname },
-    (err) => { res.end(); });
-});
-
-app.get('/blog/post.css', (req, res) => {
-  res.status(200).sendFile('./styles/post.css', { root: __dirname },
     (err) => { res.end(); });
 });
 
@@ -150,11 +126,6 @@ app.get('/blog.js', (req, res) => {
     (err) => { res.end(); });
 });
 
-app.get('/blog/post.js', (req, res) => {
-  res.status(200).sendFile('./scripts/post.js', { root: __dirname },
-    (err) => { res.end(); });
-});
-
 // any GET request, which is not supported
 // i.e. request for a wrong path, will make
 // them receive following text/plain message,
@@ -174,6 +145,7 @@ https.createServer(options, app).listen(8000, '0.0.0.0',
 // Any previous link, spread on internet
 // need to be handler properly, which is why
 // I'm using this HTTP traffic handler server
+
 http.createServer((req, res) => {
   res.writeHead(301, { "Location": "https://" + req.headers['host'] + req.url });
   res.end();

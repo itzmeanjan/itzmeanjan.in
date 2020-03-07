@@ -1,4 +1,3 @@
 # robots.txt for https://itzmeanjan.in/
 
 User-agent: *
-Disallow: /data/ # no opendata has been made available till date of writing, so try ignoring it my dear BOT :)
