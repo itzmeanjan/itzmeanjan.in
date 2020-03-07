@@ -15,9 +15,9 @@ app.set('env', 'production');
 
 // enabled https ;)
 const options = {
-  key: readFile('~/.sslcert/itzmeanjan.in/privkey.pem'),
-  cert: readFile('~/.sslcert/itzmeanjan.in/fullchain.pem'),
-  ca: readFile('~/.sslcert/itzmeanjan.in/chain.pem')
+  key: readFile('/home/ubuntu/.sslcert/itzmeanjan.in/privkey.pem'),
+  cert: readFile('/home/ubuntu/.sslcert/itzmeanjan.in/fullchain.pem'),
+  ca: readFile('/home/ubuntu/.sslcert/itzmeanjan.in/chain.pem')
 }
 
 
