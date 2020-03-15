@@ -9,6 +9,7 @@ const http = require('http');
 const https = require('https');
 const readFile = require('fs').readFileSync;
 const app = express();
+const { create, insert } = require('./stat');
 
 // good to set it, when deploying in production
 app.set('env', 'production');
@@ -20,11 +21,14 @@ const options = {
   ca: readFile('/home/ubuntu/.sslcert/itzmeanjan.in/chain.pem')
 }
 
+// creates in-disk sqlite database
+create();
 
 // this middleware will help me logging access stat,
 // so that later on I can analyze site traffic ( if I ever need to :) )
 function writeLog(req, res, next) {
-  console.log(`${req.method} | ${req.url} | ${req.ip} | ${Date().toString()}`);
+  insert(req.method, req.url, req.ip, new Date()); // inserting log record into sqlite database
+  //console.log(`${req.method} | ${req.url} | ${req.ip} | ${Date().toString()}`);
   next();
 }
 
@@ -151,3 +155,4 @@ http.createServer((req, res) => {
   res.end();
 }).listen(8001, '0.0.0.0',
   () => { console.log('[+]HTTP Server started\n') });
+
