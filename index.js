@@ -14,7 +14,7 @@ const app = express();
 // good to set it, when deploying in production
 app.set('env', 'production');
 
-let db;
+let db; // connection to database
 
 // enabled https ;)
 const options = {
@@ -23,41 +23,55 @@ const options = {
   ca: readFile('/home/ubuntu/.sslcert/itzmeanjan.in/chain.pem')
 }
 
-/**
- * 
+
+/** 
+ * connects to database, and invokes callback when done
  * @param {Function} callback - callback function
  */
 function connect(callback) {
   db = new sqlite.Database("stat.sqlite3", callback);
 }
 
+/**
+ * creates database table, where records to be put
+ */
 function create() {
-  db.run(`create table if not exists itzmeanjan_in (id int primary key autoincrement, method text not null, url text not null, ip text not null, time text not null);`, close);
+  db.run(`create table if not exists itzmeanjan_in (id integer primary key autoincrement, method text not null, url text not null, ip text not null, time integer not null);`, (e) => {
+    return e ? console.log(e) : console.log("created");
+  });
 }
 
 /**
  * @param {string} method - Http method
  * @param {string} url - url path accessed by remote
  * @param {string} ip - ip address of remote
- * @param {Date} time - date time of access
+ * @param {number} time - timestamp of access
  */
 function insert(method, url, ip, time) {
   db.run(`insert into itzmeanjan_in (method, url, ip, time) values(?, ?, ?, ?);`,
-    [method, url, ip, time.toISOString()],
-    (e) => e ? console.log(e) : console.log("pushed in"));
+    [method, url, ip, time],
+    (e) => {
+      if (e) {
+        console.log(e);
+      }
+    });
 }
 
 function close() {
-  db.close((e) => e ? console.log(e) : console.log("closed"));
+  db.close((e) => {
+    console.log(e ? e : "closed");
+    process.exit(0);
+  });
 }
 
 connect(create);
-connect(() => { console.log("connected"); });
+process.on('SIGINT', close);
+
 
 // this middleware will help me logging access stat,
 // so that later on I can analyze site traffic ( if I ever need to :) )
 function writeLog(req, res, next) {
-  insert(req.method, req.url, req.ip, new Date());
+  insert(req.method, req.url, req.ip, Date.now());
   //console.log(`${req.method} | ${req.url} | ${req.ip} | ${Date().toString()}`);
   next();
 }
@@ -184,4 +198,5 @@ http.createServer((req, res) => {
   res.end();
 }).listen(8001, '0.0.0.0',
   () => { console.log('[+]HTTP Server started\n') });
+
 
