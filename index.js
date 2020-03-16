@@ -8,11 +8,13 @@ const express = require('express');
 const http = require('http');
 const https = require('https');
 const readFile = require('fs').readFileSync;
-const { dbSetUp, connect, insert } = require('./stat');
+const sqlite = require('sqlite3');
 const app = express();
 
 // good to set it, when deploying in production
 app.set('env', 'production');
+
+let db;
 
 // enabled https ;)
 const options = {
@@ -21,29 +23,41 @@ const options = {
   ca: readFile('/home/ubuntu/.sslcert/itzmeanjan.in/chain.pem')
 }
 
-dbSetUp().then((v) => {
-  console.log("logging setup done");
+/**
+ * 
+ * @param {Function} callback - callback function
+ */
+function connect(callback) {
+  db = new sqlite.Database("stat.sqlite3", callback);
+}
 
-  connect().then((v) => {
-    console.log("connected to database");
-  }).catch((e) => {
-    console.log(e);
-    process.exit(1);
-  });
-}).catch((e) => {
-  console.log(e);
-  process.exit(1);
-});
+function create() {
+  db.run(`create table if not exists itzmeanjan_in (id int primary key autoincrement, method text not null, url text not null, ip text not null, time text not null);`, close);
+}
 
+/**
+ * @param {string} method - Http method
+ * @param {string} url - url path accessed by remote
+ * @param {string} ip - ip address of remote
+ * @param {Date} time - date time of access
+ */
+function insert(method, url, ip, time) {
+  db.run(`insert into itzmeanjan_in (method, url, ip, time) values(?, ?, ?, ?);`,
+    [method, url, ip, time.toISOString()],
+    (e) => e ? console.log(e) : console.log("pushed in"));
+}
+
+function close() {
+  db.close((e) => e ? console.log(e) : console.log("closed"));
+}
+
+connect(create);
+connect(() => { console.log("connected"); });
 
 // this middleware will help me logging access stat,
 // so that later on I can analyze site traffic ( if I ever need to :) )
 function writeLog(req, res, next) {
-  insert(req.method, req.url, req.ip, new Date()).then((v) => {
-    return v ? 0 : 1;
-  }).catch((e) => {
-    console.log(e);
-  });
+  insert(req.method, req.url, req.ip, new Date());
   //console.log(`${req.method} | ${req.url} | ${req.ip} | ${Date().toString()}`);
   next();
 }
