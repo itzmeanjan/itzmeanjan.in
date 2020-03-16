@@ -1,5 +1,9 @@
 'use strict';
 
+/*
+  Author: Anjan Roy <anjanroy@yandex.com>
+*/
+
 const sqlite = require('sqlite3');
 
 let db;
@@ -64,7 +68,7 @@ exports.insert = (method, url, ip, time) => {
  */
 function getConnection() {
     return new Promise((resolve, reject) => {
-        v = new sqlite.Database("stat.sqlite3", (err) => {
+        let v = new sqlite.Database("stat.sqlite3", (err) => {
             if (err) {
                 reject(err);
             }
