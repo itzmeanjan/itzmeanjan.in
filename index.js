@@ -8,8 +8,8 @@ const express = require('express');
 const http = require('http');
 const https = require('https');
 const readFile = require('fs').readFileSync;
+const { dbSetUp, connect, insert } = require('./stat');
 const app = express();
-const { create, insert } = require('./stat');
 
 // good to set it, when deploying in production
 app.set('env', 'production');
@@ -21,13 +21,29 @@ const options = {
   ca: readFile('/home/ubuntu/.sslcert/itzmeanjan.in/chain.pem')
 }
 
-// creates in-disk sqlite database
-create();
+dbSetUp().then((v) => {
+  console.log("logging setup done");
+
+  connect().then((v) => {
+    console.log("connected to database");
+  }).catch((e) => {
+    console.log(e);
+    process.exit(1);
+  });
+}).catch((e) => {
+  console.log(e);
+  process.exit(1);
+});
+
 
 // this middleware will help me logging access stat,
 // so that later on I can analyze site traffic ( if I ever need to :) )
 function writeLog(req, res, next) {
-  insert(req.method, req.url, req.ip, new Date()); // inserting log record into sqlite database
+  insert(req.method, req.url, req.ip, new Date()).then((v) => {
+    return v ? 0 : 1;
+  }).catch((e) => {
+    console.log(e);
+  });
   //console.log(`${req.method} | ${req.url} | ${req.ip} | ${Date().toString()}`);
   next();
 }
@@ -39,7 +55,6 @@ function writeLog(req, res, next) {
 //
 // it helped me in redusing size of this script
 app.use(writeLog);
-
 
 app.get('/', (req, res) => {
   res.status(200).contentType('html').sendFile(

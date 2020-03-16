@@ -2,21 +2,41 @@
 
 const sqlite = require('sqlite3');
 
-let db = new sqlite.Database("./stat.db", (err) => {
-    return err ? console.error(`${err.name} - ${err.message}`) : console.log("connected");
-}); // connecting to database
-
+let db;
 
 /**
- * creates an in-disk database with hardcoded table name
- * which is to be used for site logging purpose
+ * @returns {Promise<boolean>} - performs initial database set up
  */
-exports.create = function () {
-    db.run(`create table itzmeanjan_in if not exists (id int primary key autoincrement, method text not null, url text not null, ip text not null, time text not null)`, (res, err) => {
-        if (err) {
-            return console.error(`${err.name} - ${err.message}`);
-        }
-        console.log("created");
+exports.dbSetUp = () => {
+    return new Promise((resolve, reject) => {
+        getConnection().then((v) => {
+            db = v;
+            create().then((v) => {
+                close().then((v) => {
+                    resolve(v);
+                }).catch((e) => {
+                    reject(e);
+                });
+            }).catch((e) => {
+                reject(e);
+            });
+        }).catch((e) => {
+            reject(e);
+        });
+    });
+}
+
+/**
+ * @returns {Promise<boolean>} - connects to database & initializes `db`, for future database ops
+ */
+exports.connect = () => {
+    return new Promise((resolve, reject) => {
+        getConnection().then((v) => {
+            db = v;
+            resolve(true);
+        }).catch((e) => {
+            reject(e);
+        });
     });
 }
 
@@ -25,21 +45,61 @@ exports.create = function () {
  * @param {string} url - url path accessed by remote
  * @param {string} ip - ip address of remote
  * @param {Date} time - date time of access
+ * @returns {Promise<boolean>} - inserts record into database
  */
-exports.insert = function (method, url, ip, time) {
-    db.run(`insert into itzmeanjan_in (method, url, ip, time) values(?, ?, ?, ?)`, [method, url, ip, time.toISOString()], (res, err) => {
-        if (err) {
-            return console.error(`${err.name} - ${err.message}`);
-        }
-        console.log("inserted");
+exports.insert = (method, url, ip, time) => {
+    return new Promise((resolve, reject) => {
+        db.run(`insert into itzmeanjan_in (method, url, ip, time) values(?, ?, ?, ?);`, [method, url, ip, time.toISOString()], (res, err) => {
+            if (err) {
+                reject(err);
+            }
+
+            resolve(true);
+        });
     });
 }
 
 /**
- * closes existing database connection
+ * @returns {Promise<sqlite.Database>} - a connection to database
  */
-exports.close = function () {
-    db.close((err) => {
-        return err ? console.error(`${err.name} - ${err.message}`) : console.log("closed");
+function getConnection() {
+    return new Promise((resolve, reject) => {
+        v = new sqlite.Database("stat.sqlite3", (err) => {
+            if (err) {
+                reject(err);
+            }
+
+            resolve(v);
+        });
+    });
+}
+
+/**
+ * @returns {Promise<boolean>} - creates database table
+ */
+function create() {
+    return new Promise((resolve, reject) => {
+        db.run(`create table if not exists itzmeanjan_in (id int primary key autoincrement, method text not null, url text not null, ip text not null, time text not null);`, (res, err) => {
+            if (err) {
+                reject(err);
+            }
+
+            resolve(true);
+        });
+    });
+}
+
+/**
+ * @returns {Promise<boolean>} -  closes existing database connection
+ */
+function close() {
+    return new Promise((resolve, reject) => {
+        db.close((err) => {
+            if (err) {
+                reject(err);
+            }
+
+            resolve(true);
+        });
     });
 }
