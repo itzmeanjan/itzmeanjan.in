@@ -198,5 +198,3 @@ http.createServer((req, res) => {
   res.end();
 }).listen(8001, '0.0.0.0',
   () => { console.log('[+]HTTP Server started\n') });
-
-
