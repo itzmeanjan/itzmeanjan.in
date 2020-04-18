@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<!--
+  Author: Anjan Roy<anjanroy@yandex.com>
+-->
+<html>
+
+<head>
+    <title>
+        Image Ops - Inversion
+    </title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta name="author" content="Anjan Roy">
+    <meta name="description" content="Understanding inverse image transformation">
+    <meta name="keywords"
+        content="image, processing, filterIt, filtering, inverse, transformation, anjanroy, itzmeanjan, blog, java">
+    <meta property="og:title" content="Image Ops - Inversion">
+    <meta property="og:description" content="Understanding inverse image transformation">
+    <meta property="og:url" content="https://itzmeanjan.in/blog/0.html">
+    <meta property="og:type" content="article">
+    <meta property="og:image" content="https://itzmeanjan.in/blog/0/img/6.jpg">
+    <meta name="theme-color" content="darkslategrey">
+    <link rel="stylesheet" type="text/css" href="common.css">
+</head>
+
+<body>
+    <div id="parentDiv">
+        <div id="navBar">
+            <nav>
+                <a class="navLink" href="/"><big>H</big>ome</a> |
+                <a class="navLink" href="/blog"><big>B</big>log</a> |
+                <a class="navLink" href="/projects"><big>P</big>rojects</a> |
+                <a class="navLink" href="/contact"><big>C</big>ontact</a>
+            </nav>
+        </div>
+    </div>
+    <div id="parentDiv">
+        <div class="childDiv">
+            <article>
+                <h1>
+                    Image Ops - Inversion
+                </h1>
+                <p>
+                    <i>On 19th April, 2020</i>
+                    <br>
+                    <br>
+                    <br>
+                    Finally I'm starting my own blog. Welcome :)
+                    <br>
+                    <br>
+                    As I've some knack to work with images, I'm going to go through a set
+                    of posts in which I'll attempt to describe some operations on both
+                    grayscale & color images. So, let's get started.
+                    <br>
+                    <br>
+                    Say, we're given a grayscale binary image & asked to find inverted image,
+                    <strong>what do we do to invert that image ?</strong>
+                    <img class="imgCenter" src="0/img/0.jpg">
+                    We'll simply flip each bit located at each pixel.
+                    <img class="imgCenter" src="0/img/1.jpg">
+                    But in case of binary images, we can have only two possible
+                    levels of color i.e. {0, 1} = {black, white}. To represent more colors we need
+                    to use more bits. So, we're going to use 8-bit color intensity
+                    values. Using 8-bits we can represent x, be an unsigned
+                    integers | x ∈ [0, 255] i.e. now we can represent 256 color levels, where 0 & 255
+                    denotes black & white respectively.
+                    <br>
+                    <br>
+                    If we're asked to invert this image, <strong>what do we do ?</strong>
+                    <img class="imgCenter" src="0/img/2.jpg">
+                    We'll find bitwise NOT ( ~ ) of each pixel intensity across whole image.
+                    <img class="imgCenter" src="0/img/3.jpg">
+                    Upto this point things were pretty easy. Now we're going to deal with color images.
+                    So we'll work with 24-bit RGB images i.e. each pixel location will hold 3 basic color
+                    components namely Red, Green & Blue.
+                    <br>
+                    <br>
+                    <span class="noteText">Note : RGB color model is additive in nature i.e. adding
+                        three different color components results into final color.</span>
+                    <br>
+                    <br>
+                    For that we've to apply bitwise NOT operator on each pixel for each of three
+                    color components.
+                    <br>
+                    <br>
+                    Say we're given with this image.
+                    <img class="imgCenter" src="0/img/4.jpg">
+                    And we're going to invert it
+                    <img class="imgCenter" src="0/img/5.jpg">
+                    We already know an image can be represented as matrix
+                    of size <strong>M x N</strong>, where given image is of width <strong>N</strong>
+                    & height <strong>M</strong>. Till now we were processing image matrix sequentially, but
+                    how about we consider concurrent processing of multiple pixels, leveraging
+                    power of modern multi-theaded multi-core CPUs.
+                    <br>
+                    For concurrent processing of image matrix we can use SIMD model of concurrent
+                    computation, where we'll split image matrix into <strong>M</strong>
+                    row vectors and each row to be processed by different thread of execution. That
+                    will definitely decrease time complexity to <strong>O( N )</strong>, where N = #-of pixels along
+                    horizontal direction
+                    in image.
+                    <br>
+                    Let's talk about best case scenario, when we can afford
+                    <strong>M * N</strong> number of processors, we'll obtain
+                    result in constant time i.e. O( 1 ).
+                    <br>
+                    <br>
+                    <span class="noteText">Note : Instead of applying bitwise NOT ( ~ ) operator on each pixel
+                        intensity, we
+                        can also consider subtracting pixel intensity from 255 ( max intensity value for 8-bit image )
+                        --- returns
+                        same result.
+                    </span>
+                    <br>
+                    <br>
+                    Before wrapping it up, I'd like to mention my open source project
+                    <a href="https://github.com/itzmeanjan/filterIt" class="simpleLink">filterIt</a>
+                    which is a pure Java implementation of different image processing operations. If you'd
+                    like to check image inversion implementation, <a
+                        href="https://github.com/itzmeanjan/filterIt/blob/master/in/itzmeanjan/filterit/transform/InverseImageTransformation.java"
+                        class="simpleLink">here</a> it's. I'm seeking contribution in development of
+                    <strong>filterIt</strong>.
+                    <br>
+                    <br>
+                    Thanking you ;)
+                </p>
+            </article>
+        </div>
+    </div>
+    <div id="footerDiv">
+        <footer>
+            <p id="footerText">
+                &copy <a href="https://github.com/itzmeanjan/itzmeanjan.in" id="footerLink"
+                    target="_blank"><big>A</big>njan
+                    Roy</a> ( <big>M</big>IT Licensed )
+            </p>
+        </footer>
+    </div>
+</body>
+
+</html>

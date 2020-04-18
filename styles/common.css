@@ -19,7 +19,7 @@ body{
 .childDiv{
   background-color: #373e45;
   border-radius: 2vmin;
-  width: 90%;
+  width: 92%;
   padding-top: .1vmax;
   padding-bottom: .1vmax;
   margin-left: auto;
@@ -107,4 +107,24 @@ p{
 #footerLink {
 	color: white;
 	outline: none;
+}
+
+.imgCenter {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 1.5vmin;
+  margin-bottom: 1.5vmin;
+  width: 69%;
+  border-radius: 1.2vmin;
+}
+
+.noteText {
+    font-size: 1.4vmax;
+    color:greenyellow;
+    background-color: black;
+    font-family: fantasy;
+    border-radius: 1vmin;
+    padding-left: 0.5vmin;
+    padding-right: 0.5vmin;
 }
