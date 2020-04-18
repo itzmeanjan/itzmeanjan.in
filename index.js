@@ -23,7 +23,6 @@ const options = {
   ca: readFile('/home/ubuntu/.sslcert/itzmeanjan.in/chain.pem')
 }
 
-
 /** 
  * connects to database, and invokes callback when done
  * @param {Function} callback - callback function
@@ -63,6 +62,7 @@ function close() {
     process.exit(0);
   });
 }
+
 
 connect(create);
 process.on('SIGINT', close);
@@ -117,6 +117,22 @@ app.get('/projects', (req, res) => {
     });
 });
 
+app.get('/blog/:id.html', (req, res) => {
+  res.status(200).contentType('html').sendFile(
+    `./blog/${req.params['id']}.html`, { root: __dirname }, (err) => {
+      if (err !== undefined && err !== null)
+        res.status(404).end();
+    });
+});
+
+app.get('/blog/:id/img/:imgId.jpg', (req, res) => {
+  res.status(200).contentType('jpg').sendFile(
+    `./blog/${req.params['id']}_img_${req.params['imgId']}.jpg`, { root: __dirname }, (err) => {
+      if (err !== undefined && err !== null)
+        res.status(404).end();
+    });
+});
+
 app.get('/robots.txt', (req, res) => {
   res.status(200).contentType('text/plain').sendFile(
     './data/robots.txt', { root: __dirname }, (err) => {
@@ -163,16 +179,6 @@ app.get('/projects.js', (req, res) => {
     (err) => { res.end(); });
 });
 
-app.get('/blog.json', (req, res) => {
-  res.status(200).sendFile('./data/blog.json', { root: __dirname },
-    (err) => { res.end(); });
-});
-
-app.get('/blog.js', (req, res) => {
-  res.status(200).sendFile('./scripts/blog.js', { root: __dirname },
-    (err) => { res.end(); });
-});
-
 // any GET request, which is not supported
 // i.e. request for a wrong path, will make
 // them receive following text/plain message,
@@ -192,6 +198,7 @@ https.createServer(options, app).listen(8000, '0.0.0.0',
 // Any previous link, spread on internet
 // need to be handler properly, which is why
 // I'm using this HTTP traffic handler server
+
 
 http.createServer((req, res) => {
   res.writeHead(301, { "Location": "https://" + req.headers['host'] + req.url });
