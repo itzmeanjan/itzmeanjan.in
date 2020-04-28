@@ -141,7 +141,7 @@ def extractIt(dataObject, username: str, targetClass: str = 'col-10 col-lg-9 d-i
 def fetchIt(url: str) -> str:
     try:
         resp = get(url)
-        return resp.content if(resp.status_code == 200) else None
+        return resp.content if resp.status_code == 200 else None
     except Exception:
         return None
 
