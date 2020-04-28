@@ -55,7 +55,7 @@ p{
 
 .simpleLink:hover{
   color: yellow;
-  font-size: 2vmax;
+  font-size: 1.5vmax;
   outline: none;
 }
 
@@ -75,19 +75,19 @@ p{
 }
 
 .navLink:link{
-  font-size: 2.7vmax;
+  font-size: 2.5vmax;
   color: #9fc69f;
   outline: none;
 }
 
 .navLink:visited{
-  font-size: 2.7vmax;
+  font-size: 2.5vmax;
   color: #9fc69f;
   outline: none;
 }
 
 .navLink:hover{
-  font-size: 2.9vmax;
+  font-size: 2.6vmax;
   color: greenyellow;
   outline: none;
 }
