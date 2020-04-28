@@ -6,12 +6,73 @@
 
 const express = require('express');
 const http = require('http');
+const https = require('https');
+const readFile = require('fs').readFileSync;
+const sqlite = require('sqlite3');
 const app = express();
+
+// good to set it, when deploying in production
+app.set('env', 'production');
+
+let db; // connection to database
+
+// enabled https ;)
+const options = {
+  key: readFile('/home/ubuntu/.sslcert/itzmeanjan.in/privkey.pem'),
+  cert: readFile('/home/ubuntu/.sslcert/itzmeanjan.in/fullchain.pem'),
+  ca: readFile('/home/ubuntu/.sslcert/itzmeanjan.in/chain.pem')
+}
+
+/** 
+ * connects to database, and invokes callback when done
+ * @param {Function} callback - callback function
+ */
+function connect(callback) {
+  db = new sqlite.Database("stat.sqlite3", callback);
+}
+
+/**
+ * creates database table, where records to be put
+ */
+function create() {
+  db.run(`create table if not exists itzmeanjan_in (id integer primary key autoincrement, method text not null, url text not null, ip text not null, time integer not null);`, (e) => {
+    return e ? console.log(e) : console.log("created");
+  });
+}
+
+/**
+ * @param {string} method - Http method
+ * @param {string} url - url path accessed by remote
+ * @param {string} ip - ip address of remote
+ * @param {number} time - timestamp of access
+ */
+function insert(method, url, ip, time) {
+  db.run(`insert into itzmeanjan_in (method, url, ip, time) values(?, ?, ?, ?);`,
+    [method, url, ip, time],
+    (e) => {
+      if (e) {
+        console.log(e);
+      }
+    });
+}
+
+function close() {
+  db.close((e) => {
+    console.log(e ? e : "closed");
+    process.exit(0);
+  });
+}
+
+
+connect(create);
+process.on('SIGINT', close);
+
 
 // this middleware will help me logging access stat,
 // so that later on I can analyze site traffic ( if I ever need to :) )
 function writeLog(req, res, next) {
-  console.log(`${req.method} | ${req.url} | ${req.ip} | ${Date().toString()}`);
+  insert(req.method, req.url, req.ip, Date.now());
+  //console.log(`${req.method} | ${req.url} | ${req.ip} | ${Date().toString()}`);
   next();
 }
 
@@ -127,5 +188,20 @@ app.get('*', (req, res) => {
   res.end();
 });
 
-http.createServer(app).listen(8000, '0.0.0.0',
+https.createServer(options, app).listen(8000, '0.0.0.0',
+  () => { console.log('[+]HTTPS Server started\n') });
+
+// will run a handler server on 8001 port, so that
+// all traffics incoming via port 80 ( which is HTTP port )
+// gets redirected into port 443 ( which is HTTPS )
+// 
+// Any previous link, spread on internet
+// need to be handler properly, which is why
+// I'm using this HTTP traffic handler server
+
+
+http.createServer((req, res) => {
+  res.writeHead(301, { "Location": "https://" + req.headers['host'] + req.url });
+  res.end();
+}).listen(8001, '0.0.0.0',
   () => { console.log('[+]HTTP Server started\n') });
