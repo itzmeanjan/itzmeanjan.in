@@ -10,6 +10,7 @@ const https = require('https');
 const readFile = require('fs').readFileSync;
 const sqlite = require('sqlite3');
 const app = express();
+const cors = require('cors');
 
 // good to set it, when deploying in production
 app.set('env', 'production');
@@ -83,6 +84,8 @@ function writeLog(req, res, next) {
 //
 // it helped me in redusing size of this script
 app.use(writeLog);
+// CORS enabled
+app.use(cors());
 
 app.get('/', (req, res) => {
   res.status(200).contentType('html').sendFile(
