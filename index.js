@@ -149,11 +149,11 @@ app.get('/robots.txt', (req, res) => {
 // well I know, there're thousands of services, providing same/ much more functionalities
 // but still it's a small venture
 app.get('/ip', (req, res) => {
-  res.status(200).contentType('json').json(
+  res.status(200).contentType('json').send(JSON.stringify(
     {
       ip: req.ip
-    }
-  );
+    },
+    space = '\t'));
   res.end();
 });
 
